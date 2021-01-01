@@ -96,34 +96,24 @@ main {
   display: block;
   width: 100%;
   max-width:350px; 
-  border-radius: 16px;
+  border-radius: 2rem;
   margin: auto;
   background-color: white;
 
-  &__banner {
-    height: 140px;
-    width: 100%;
-    background: url('../images/bg-pattern-card.svg') center no-repeat;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-  }
-
-  &__info {
+  &__avatar {
     position: relative;
+    height: 50px;
 
-    .avatar {
-      height: 50px;
-
-      img {
-        height: 100px;
+    height: 100px;
         width: 100px;
         position: relative;
         top: -50px;
         border-radius: 100%;
         border: 4px #fff solid;
-      }   
-    }
   }
+   
+    
+  
 }
 .stats {
   padding: 2rem 1rem;
