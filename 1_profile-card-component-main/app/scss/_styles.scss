@@ -1,130 +1,94 @@
 html {
-  font-size: 100%;
   box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
-}
-
-.center{
-  text-align: center;
-}
-
-// Globals
-li {
-  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: none;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;  
   display: flex;
-  flex-direction: column;
-  font-family: $font;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 3rem;
   background-color: $darkCyan;
   background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
   background-repeat: no-repeat;
-  @include responsive(sm-phone)
-  {
-    background-size: 700px 700px, 700px 700px;
-    background-position: left -300px top -400px, right -300px bottom -400px
-  }
-  @include responsive(phone)
-  {
-    background-size: 750px 750px, 750px 750px;
-    background-position: left -400px top -400px, right -400px bottom -400px
-  }
-  @include responsive(tablet)
-  {
-    background-size: 800px 800px, 800px 800px;
-    background-position: left -350px top -450px, right -350px bottom -500px;
-  }
-  @include responsive(sm-desktop)
-  {
-    background-size: 800px 800px, 800px 800px;
-    background-position: left -275px top -450px, right -275px bottom -450px;
-  }
-  @include responsive(desktop)
-  {
-    background-size: 850px 850px, 850px 850px;
-    background-position: left -200px top -400px, right -200px bottom -500px;
-  }
-}
-
-.flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-hr{
-  height: 2px;
-  color: #fff;
-}
-
-main {
-  position: relative;
-  padding: 0 24px;
-  margin: auto;
-  width: 100%;
-}
-
-// Font Styles
-.bold {
+  background-position: right calc(47vw + 15%) bottom calc(65vh - 15vw), left calc(40vw + 25%) top calc(72vh - 10vw);
   font-size: 1.125rem;
-  font-weight: 700;
-  color: $darkBlue;
 }
 
-.normal {
-  font-size: 1rem;
-  font-weight: 400;
-  color: $darkGrayishBlue;
-}
-
-.light {
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: $darkGrayishBlue;
-}
-
-//  Styles
 .card {
-  display: block;
-  width: 100%;
-  max-width:350px; 
-  border-radius: 2rem;
-  margin: auto;
+  max-width: 500px;
+  border-radius: 1rem;
   background-color: white;
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, .2);
+  overflow: hidden;
 
-  &__avatar {
-    position: relative;
-    height: 50px;
+  &__user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #ededed;
 
-    height: 100px;
-        width: 100px;
-        position: relative;
-        top: -50px;
-        border-radius: 100%;
-        border: 4px #fff solid;
-  }
-   
-    
-  
-}
-.stats {
-  padding: 2rem 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-} 
+      &__avatar {
+          margin-top: -3.75rem;
+          margin-bottom: 1.5rem;
+          border: 5px solid white;
+          border-radius: 50%;
+          transition: all .5s ease;
+      }
 
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
+      &__profile {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.5625rem;
+          transition: all .5s ease;
 
-  a{
-    color: $darkBlue;
+          h1 {
+              margin-right: .5rem;
+              color: $darkBlue;
+              font-size: inherit;
+          }
+
+          span {
+              color: $darkGray;
+          }
+        }
+
+      &__location {
+          margin-bottom: 1.5rem;
+          color: $darkGray;
+          font-size: 0.875rem;
+      }
+    }
+
+  &__info {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 3em;
+      padding-top: 1.5rem;
+      padding-right: 3.5rem;
+      text-align: center;
+
+      &__stats{
+        text-align: center;
+
+        &__number {
+          margin-bottom: .5rem;
+          color: $darkBlue;
+          font-weight: 700;
+        }  
+        &__label {
+          color: $darkGray;
+          font-size: 0.5625rem;
+          letter-spacing: 1px;
+        }      
+    }
   }
 }

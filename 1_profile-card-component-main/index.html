@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="app/images/favicon-32x32.png">
-  <link rel="stylesheet" href="app/scss/main.min.css">
-  <title>Frontend Mentor | Profile card component</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="app/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="app/scss/main.min.css">
+    <title>Frontend Mentor | Profile Card Component</title>
 </head>
 <body>
   <main>
-    <section class="card center">
-      <img src="app/images/bg-pattern-card.svg" alt="">
-
-      <div class="card__info"> 
-          <img class="card__info__avatar" src="app/images/image-victor.jpg" alt="Victor">
-
-        <div class="info">
-          <h2><span class="name bold">Victor Crest</span> <span class="age normal">26</span> <br><br><span class="location normal">London</span></h2>
+    <section class="card">
+      <header class="card__banner">
+        <img src="app/images/bg-pattern-card.svg" alt="" role="presentation">
+      </header>
+      <div class="card__user">
+        <img class="card__user__avatar" src="app/images/image-victor.jpg" alt="Victor Profile">
+        <div class="card__user__profile">
+          <h1>Victor Crest</h1>
+          <span>26</span>
         </div>
+        <p class="card__user__location">London</p>
       </div>
-      <div class="status">
-      <ul class="stats flex">
-        <li ><span class="bold">80K</span> <br> <span class="light">Followers</span></li>
-        <li ><span class="bold">803K</span> <br> <span class="light">Likes</span></li>
-        <li ><span class="bold">1.4K</span> <br> <span class="light">Photos</span></li>
-      </ul>
-      </div>
+      <footer class="card__info">
+        <div class="card__info__stats">
+            <p><span class="card__info__stats__number">80K<br><span class="card__info__stats__label">Followers</span></p>
+        </div>
+          <p><span class="card__info__stats__number">803K</span><br><span class="card__info__stats__label">Likes</span></p>
+          <p><span class="card__info__stats__number">1.4K</span><br><span class="card__info__stats__label">Photos</span></p>
+      </footer>
     </section>
   </main>
 </body>
