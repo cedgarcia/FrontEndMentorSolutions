@@ -1,11 +1,45 @@
 html {
-  font-size: 15px;
   box-sizing: border-box;
-
+  font-size: 100%;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// Layout
+
+body {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.top {
+  display: flex;
+
+  header {
+    width: 27rem;
+    margin-right: auto;
+  }
+
+  .ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+}
+section.testimonials {
+  display: flex;
+  justify-content: space-between;
+  background-color: green;
 }
 
 
@@ -15,10 +49,7 @@ html {
 
 
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+
+
+
+
