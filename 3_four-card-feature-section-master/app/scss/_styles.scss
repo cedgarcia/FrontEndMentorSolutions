@@ -1,0 +1,87 @@
+html {
+    box-sizing: border-box;
+
+}
+  
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2, 
+h3 {
+    font-weight: 400;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: $darkBlue; 
+}
+
+main {
+    @include responsive(phone) {
+        margin-top: 5.3125rem;
+
+    }
+    @include responsive(desktop) {
+        margin-top: 5rem;
+    }
+}
+
+header {
+    text-align: center;
+    h1 {
+        font-size: 2.25rem;
+        letter-spacing: .1px;
+    }
+    h1:first-child {
+        font-weight: 200;
+    }
+    h1:nth-child(2){
+        margin-top: -2px;
+    }
+    h2 {
+        font-size: 0.9375rem;
+        max-width: 540px;
+        margin: 0 auto;
+        margin-top: 1rem;
+        color: $grayBlue;
+        opacity: .7;
+        letter-spacing: 0.1px;
+    }
+}
+
+.cards {
+    margin-top: 64px;
+
+    .card {
+        background-color: $lightGray;
+        border-radius: 8px;
+        box-shadow: 0px 15px 20px $shadow;
+        position: relative;
+        overflow: hidden;
+    
+
+    }
+    .card::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 3.55px;
+    
+    }
+    .card:nth-child(1)::before {
+        background-color: $red;
+      }
+  
+}

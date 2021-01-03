@@ -2,44 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="app/images/favicon-32x32.png">
+  <link rel="stylesheet" href="app/scss/main.min.css">
   <title>Frontend Mentor | Four card feature section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <header>
+      <h1>Reliable, efficient delivery</h1>
+      <h1>Powered by Technology</h1>
+      <h2>Our Artificial Intelligence powered tools use millions of project data points 
+      to ensure that your project is successful</h2>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h1>Supervisor</h1>
+        <h3>Monitors activity to identify project roadblocks</h3>
+        <img src="app/images/icon-supervisor.svg" alt="">
+      </div>
+      <div class="card">
+        <h1>Team Builder</h1>
+        <h3>Scans our talent network to create the optimal team for your project</h3>
+        <img src="app/images/icon-team-builder.svg" alt="team-builder">
+      </div>
+      <div class="card">
+        <h1>Karma</h1>
+        <h3>Regularly evaluates our talent to ensure quality</h3>
+        <img src="app/images/icon-karma.svg" alt="">
+      </div> 
+      <div class="card">
+        <h1>Calculator</h1>
+        <h3>Uses data from past projects to provide better delivery estimates</h3>
+        <img src="app/images/icon-calculator.svg" alt="">
+      </div> 
+    </section>
   
-  Reliable, efficient delivery
-  Powered by Technology
-
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  </main>
 </body>
 </html>
