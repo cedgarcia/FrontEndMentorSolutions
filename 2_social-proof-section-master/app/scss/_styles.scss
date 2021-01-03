@@ -9,37 +9,230 @@ html {
   padding: 0;
 }
 
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+
 // Layout
 
 body {
-  height: 100vh;
+  overflow-x: hidden;
+  font-size: 1rem;
+  font-family: 'Spartan', sans-serif;
+
+  @include responsive(phone) {
+    background: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+  }
+
+  @include responsive(desktop) {
+    background: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+  }
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include responsive(phone) {
+    padding: 5.5rem 1.5rem 5rem;
+  }
+  @include responsive(desktop) {
+    padding: 8.1875rem 7.5rem 6.25rem;
+    
+  }
 }
 
-section.top {
-  display: flex;
-
-  header {
-    width: 27rem;
-    margin-right: auto;
-  }
-
-  .ratings {
+section.top { 
+  @include responsive(phone) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
+
+  }
+  
+  @include responsive(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+  header {
+    margin-bottom: 2.5rem;
+    
+    justify-items: center;
+    
+    @include responsive(desktop) {
+      max-width: 445px;
+    }
+    h1 {
+      
+      margin-bottom:13px;
+      line-height: 1;
+      letter-spacing: -2.5px;
+      color: $darkMagenta;
+
+      @include responsive(phone) {
+        font-size: 32px;
+        text-align: center;
+       }
+      
+      @include responsive(desktop) {
+        font-size: 48px;
+        }
+      }
+    p {
+      font-size: 15px;
+      color: $darkGrayMagenta;
+      line-height: 1.6;
+      font-weight:500;
+      letter-spacing: -0.5px;
+      @include responsive(phone) {
+        text-align: center;
+       }
+    }
+    
+  }
+  .ratings {
+    margin-top: 10px;
+    flex-direction: column;
+    margin-bottom: 49px;
+
+
+    
+    @include responsive(phone) {
+      margin-left: 7.5rem;
+     }
+
+    @include responsive(desktop) {
+      max-width: 33.75rem;
+     }
+
+    
+
+ 
+  }
+  .rating {
+    background-color: $lightGrayMagenta;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: .4rem;
+   
+    @include responsive(sm-phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // padding: 8px;
+      // line-height: 1.6;
+     }
+
+    &__stars {
+      padding: 12px;          
+
+      img{
+        align-items: center;
+        padding:0 3px;
+        height: 16px;
+        margin-bottom: -4px;
+
+      }
+    }
+
+    &__info {
+      font-size: 13px;
+      font-weight: 700;
+      color: $darkMagenta;
+      padding-left: 12px;
+      padding-right: 32px; 
+      
+    }
+
+  }
+  .rating:first-child {
+    margin-left: -15rem;
+  }
+  .rating:nth-child(2) {
+    margin-left: -7rem;
+  }
+  .rating:last-child {
+    margin-bottom: 0;
   }
 }
 section.testimonials {
-  display: flex;
-  justify-content: space-between;
-  background-color: green;
+  margin-top: 2rem;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+  @include responsive(desktop) {
+    flex-direction: row;
+  }
+}
+.testimonial {
+  background-color: $darkMagenta;
+  border-radius: .4rem;
+  padding: 40px 32px;
+  color: $white;
+
+  @include responsive(phone) {
+    margin-bottom: 1rem;
+    }
+  @include responsive(desktop) {
+    margin-right: 2rem;
+    }
+  
+  &__client {
+    display: flex;
+    margin-bottom: 26px;
+
+    &__avatar {
+      height:2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      }
+    &__name {
+      margin-top: 4px;
+      margin-left:23px; 
+      h3 {
+        font-weight: 700;
+        font-size: .8125rem;
+        margin-bottom: 2.5px;
+        }
+      span {
+        font-size: .8125rem;
+        color:$softPink;
+        }
+      }
+    }
+  &__review {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+}
+
+.testimonial:first-child {
+  margin-bottom: 2rem;
+}
+.testimonial:nth-child(2) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial:last-child {
+  margin-top: 2rem;
+  margin-right: 0;
 }
 
 
