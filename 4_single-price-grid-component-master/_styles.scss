@@ -1,0 +1,169 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
+    background-color: $lightGray;
+}
+main {
+    box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
+    margin: 72px auto 0;
+
+    @include responsive(phone) {
+        max-width: 312px;
+    }
+    @include responsive(desktop) {
+        max-width: 635px;
+        display: grid;
+        grid-template-areas: "a a" 
+        "b c";
+        grid-template-columns: 1fr 1fr;
+        margin: 163px auto;
+    }
+  } 
+section.top {
+    background-color: #fff;
+    padding: 28px 24px 32px;
+
+
+    @include responsive(desktop) {
+        grid-area: a;
+        padding: 40px;
+        border-radius: 8px 8px 0 0;
+    }
+    h1 {
+        color: $cyan;
+        @include responsive(phone) {
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: -.25px;
+        }
+        @include responsive(desktop) {
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -.3px;
+        }
+    }
+    h3 {
+        margin-top: 24px;
+        color: $yellow;
+        @include responsive(phone) {
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: -.19px;
+          
+            margin-bottom: 16px;
+        }
+        @include responsive(desktop) {
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: -.23px;
+        
+            margin-bottom: 10px;
+         }   
+    }
+    p {
+        line-height: 26px;
+        color: $grayBlue;
+        @include responsive(phone) {
+            font-size: 14px;      
+            letter-spacing: -.18px;
+        }
+        @include responsive(desktop) {
+            font-size: 16px;
+            letter-spacing: -.2px;
+        }   
+    }
+}
+section.mid {  
+    background-color: $cyan;
+    padding: 24px;
+    color: #fff;
+    @include responsive(desktop) {
+        grid-area: b;
+        padding: 40px 39px 39px 40px;
+        border-radius: 0 0 0 8px;
+    }
+    h2 {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -.23px;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        @include responsive(desktop) {
+            margin-top: 17px;
+
+        }
+        p:nth-child(1) {
+
+            font-size: 32px;
+            line-height: 37px;
+            letter-spacing: -.4px;
+        }
+        p:nth-child(2) {
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: -.2px;
+            margin-left: 12px;
+            color: $grayBlue;
+        }
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: -.2px;
+        }
+    }
+    p {
+        margin-top: 16px;
+        @include responsive(phone) {
+            margin-top: 4px;
+            margin-bottom: 26px;
+        }
+    }
+    button {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -.2px;
+        width: 100%;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        background: $yellow;
+        padding: 16px 0 15px;
+        border-radius: 5px;
+        transition: all 0.2s ease;
+        box-shadow: 0 10px 10px 0 rgba(0,0,0,0.10);
+        font-family: 'Karla', Arial, Helvetica, sans-serif;
+        @include responsive(desktop) {
+            padding: 15px 0 14px;
+        }
+    }
+ 
+}
+section.bottom {
+    background-color: $lightCyan;
+    padding: 24px;
+    color: #fff;
+    @include responsive(desktop) {
+        grid-area: c;
+        padding: 40px;
+        border-radius: 0 0 8px 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -.18px;
+
+    }
+
+}
