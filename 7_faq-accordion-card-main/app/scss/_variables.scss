@@ -1,0 +1,33 @@
+// Colors
+
+// text primary
+$darkBlue: hsl(238, 29%, 16%);
+$softRed: hsl(14, 88%, 65%);
+// text neutral
+$grayBlue: hsl(237, 12%, 33%);
+$darkGrayBlue: hsl(240, 6%, 50%);
+
+// background gradient
+$softViolet: hsl(273, 75%, 66%);
+$softBlue: hsl(240, 73%, 65%);
+
+// divider
+$lightGrayBlue: hsl(240, 5%, 91%);
+
+// - Font size: 12px
+// ### Font
+
+// - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+// - Weights: 400, 700
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
