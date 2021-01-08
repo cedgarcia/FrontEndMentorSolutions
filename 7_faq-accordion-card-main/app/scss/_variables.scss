@@ -10,6 +10,11 @@ $darkGrayBlue: hsl(240, 6%, 50%);
 // background gradient
 $softViolet: hsl(273, 75%, 66%);
 $softBlue: hsl(240, 73%, 65%);
+$bg-gradient: linear-gradient(
+  180deg,
+  hsl(273, 75%, 66%) 0%,
+  hsl(240, 73%, 65%) 100%
+);
 
 // divider
 $lightGrayBlue: hsl(240, 5%, 91%);
@@ -22,12 +27,13 @@ $lightGrayBlue: hsl(240, 5%, 91%);
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
