@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
-.main {
+main {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -39,31 +39,57 @@ section {
     background-color: #fff;
     background-image: url(../images/bg-pattern-desktop.svg);
   }
-  h1 {
-    border: 0;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(0px 0px 99.9% 99.9%);
+}
+h1 {
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+}
+.woman-img {
+  height: 18rem;
+  width: 23.7rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/illustration-woman-online-mobile.svg);
+  @include responsive(desktop) {
+    width: 38.8rem;
+    height: 35.9rem;
+    margin-top: 0.5rem;
+    background-size: contain;
+    background-image: url(../images/illustration-woman-online-desktop.svg);
   }
-  .woman-img {
-    height: 18rem;
-    width: 23.7rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../images/illustration-woman-online-mobile.svg);
+}
+.container {
+  width: 100%;
+  margin-top: 6rem;
+  padding: 0 2.4rem;
+  overflow: hidden;
+  @include responsive(desktop) {
+    padding: 0;
+    margin-top: 0;
+    max-width: 35rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    color: $darkBlue;
+    font-weight: 700;
+
+    text-align: center;
+    margin-bottom: 3.2rem;
     @include responsive(desktop) {
-      width: 38.8rem;
-      height: 35.9rem;
-      margin-top: 0.5rem;
-      background-size: contain;
-      background-image: url(../images/illustration-woman-online-desktop.svg);
+      text-align: left;
+      margin-top: 0.3rem;
+      margin-bottom: 3.7rem;
     }
   }
 }
+
 section::before {
   content: '';
   left: 0;
