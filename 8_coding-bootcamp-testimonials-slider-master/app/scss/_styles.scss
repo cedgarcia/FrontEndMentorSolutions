@@ -1,0 +1,166 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 8vw;
+  padding-top: 14vw;
+  background: url(../images/pattern-bg.svg), url(../images/pattern-curve.svg);
+  background-position: center 8%, bottom left;
+  background-repeat: no-repeat;
+  background-size: 85%, 80%;
+
+  @include responsive(desktop) {
+    align-items: center;
+    padding: 0 8rem;
+    background-position: 90% 35%, bottom left;
+    background-size: auto;
+  }
+}
+main {
+  width: 100%;
+  max-width: 138rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include responsive(desktop) {
+    flex-direction: row;
+  }
+  .text-wrapper {
+    position: relative;
+    order: 2;
+    &::before {
+      content: url(../images/pattern-quotes.svg);
+      position: absolute;
+      top: -7rem;
+      left: 50%;
+      transform: translate(-50%) scale(0.5);
+      @include responsive(desktop) {
+        top: -8.5rem;
+        left: 11.5rem;
+        transform: initial;
+      }
+    }
+    @include responsive(desktop) {
+      order: 1;
+      margin-bottom: -4rem;
+    }
+  }
+}
+.review {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 60rem;
+  margin-bottom: 4rem;
+
+  @include responsive(desktop) {
+    width: 115%;
+    max-width: none;
+  }
+}
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include responsive(desktop) {
+    flex-direction: row;
+  }
+
+  &__name {
+    @include responsive(desktop) {
+      margin-right: 1rem;
+    }
+  }
+}
+.carousel {
+  position: relative;
+  order: 1;
+  margin-bottom: 10rem;
+
+  @media only screen and (min-width: 800px) {
+    order: 2;
+    margin-top: -4rem;
+    margin-bottom: 0;
+  }
+
+  &__img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 1rem 6rem 40px -2.5rem hsla(240, 37%, 20%, 0.2);
+    animation: floatAround 4s ease-in-out infinite;
+
+    // ANTI-ALIASING
+    outline: 1px solid transparent;
+    padding: 1px;
+    background-clip: content-box;
+
+    @media only screen and (min-width: 800px) {
+      width: 45vw;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      width: auto;
+    }
+  }
+
+  &__btn-wrapper {
+    position: absolute;
+    left: 50%;
+    bottom: -3rem;
+    transform: translate(-50%);
+    display: flex;
+
+    @media only screen and (min-width: 800px) {
+      left: 8rem;
+      bottom: -3rem;
+      transform: translate(0);
+    }
+  }
+}
+
+.btn {
+  border: none;
+  padding: 1.5rem 1.75rem;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+
+  @media only screen and (min-width: 800px) {
+    padding: 2.125rem 2.75rem;
+  }
+
+  // SAFARI FLICKERING GLITCH
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+
+  &:hover {
+    background-color: rgb(240, 240, 240);
+  }
+
+  &:active img {
+    transform: scale(1.2);
+  }
+
+  & img {
+    width: 1rem;
+
+    @media only screen and (min-width: 800px) {
+      width: auto;
+    }
+  }
+
+  &--previous {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  &--next {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+}

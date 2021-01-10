@@ -1,0 +1,55 @@
+// Colors
+$darkBlue: hsl(240, 38%, 20%);
+$grayBlue: hsl(240, 18%, 77%);
+
+html {
+  box-sizing: border-box;
+  font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+// Typography
+body {
+  color: $darkBlue;
+  font-family: 'Inter', sans-serif;
+  font-size: 4rem;
+}
+
+.review {
+  font-size: 2.25rem;
+  font-weight: 300;
+  text-align: center;
+
+  @include responsive(desktop) {
+    font-size: 3.25rem;
+    text-align: start;
+  }
+
+  @include responsive(lg-desktop) {
+    font-size: 4rem;
+    line-height: 5.5rem;
+  }
+}
+
+.author {
+  font-size: 2rem;
+
+  @include responsive(lg-desktop) {
+    font-size: 2.75rem;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__job {
+    color: $grayBlue;
+    font-weight: 500;
+  }
+}
