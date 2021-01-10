@@ -1,0 +1,18 @@
+// Colors
+$saturatedRed: hsl(0, 36%, 70%);
+$softRed: hsl(0, 93%, 68%);
+$grayishRed: hsl(0, 6%, 24%);
+
+// Base
+html {
+  box-sizing: border-box;
+  font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}

@@ -2,32 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="app/images/favicon-32x32.png">
+  <link rel="stylesheet" href="app/scss/main.min.scss">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <div class="wrapper">
+    <header>
+      <img src="app/images/logo.svg" alt="logo">
+    </header>
+    <picture>
+      <source media="(max-width: 799px)" srcset="./img/hero-mobile.jpg">
+      <source media="(min-width: 800px)" srcset="./img/hero-desktop.jpg">
+      <img src="./img/hero-desktop.jpg" alt="female model">
+    </picture>
+    <main>
+      <div class="content">
+          <h1 class="main-heading"><span class="main-heading--pink">We're</span> coming soon</h1>
+          <form>
+              <label for="email" class="paragraph">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</label>
+              <div class="input-wrapper">
+                  <input required type="email" name="email" id="email" placeholder="Email Address" class="email-input">
+                  <img src="app/images/icon-error.svg" alt="error icon" class="icon-error">
+                  <span class="error-text">Please provide a valid email</span> 
+                  <button class="btn">
+                      <img src="app/images/icon-arrow.svg" alt="arrow">
+                  </button>
+              </div>
+          </form>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
