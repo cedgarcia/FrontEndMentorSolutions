@@ -2,41 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="app/images/favicon-32x32.png">
+  <link rel="stylesheet" href="app/scss/main.min.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Learn to code by watching others
-
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <main>
+    <header>
+      <h1>Learn to code by watching others.</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+    </header>
+    <section>
+      <div class="feature"><span>Try it free 7 days</span> then $20/mo. thereafter.</div>
+      <form action="#" method="POST">
+          <div class="input-wrapper">
+              <label for="first-name">First Name</label>
+              <input required type="text" name="first-name" id="first-name" placeholder="First Name" class="form__first-name">
+              <div class="validity-icon"></div>
+          </div>
+          <div class="input-wrapper">
+              <label for="last-name">Last Name</label>
+              <input required type="text" name="last-name" id="last-name" placeholder="Last Name" class="form__last-name">
+              <div class="validity-icon"></div>
+          </div>
+          <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input required type="email" name="email" id="email" placeholder="Email Address" class="form__email">
+              <div class="validity-icon"></div>
+          </div>
+          <div class="input-wrapper">
+              <label for="password">Password</label>
+              <input required type="password" name="password" id="password" placeholder="Password" class="form__password">
+              <div class="validity-icon"></div>
+          </div>
+          <div class="button-wrapper">
+              <button type="submit">Claim Your Free Trial</button>
+          </div>
+          <p class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services.</a></p>
+      </form>
+    </section>
+  </main>
 </body>
 </html>

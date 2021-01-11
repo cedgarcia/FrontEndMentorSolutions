@@ -1,0 +1,21 @@
+// Colors
+
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$darkBlue: hsl(249, 10%, 26%);
+$grayBlue: hsl(246, 25%, 77%);
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
