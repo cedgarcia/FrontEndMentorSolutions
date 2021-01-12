@@ -8,4 +8,13 @@ $gray: hsl(0, 0%, 59%);
 html {
   box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
+  font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
