@@ -49,8 +49,63 @@ form {
   @include responsive(desktop) {
     margin-bottom: 11rem;
     flex-direction: row;
+    width: 100%;
+  }
+
+  .input-wrapper {
+    position: relative;
+    flex: 1;
+    margin-right: 0;
+
+    @include responsive(desktop) {
+      margin-right: 2rem;
+    }
+  }
+  input,
+  button {
+    height: 7rem;
+    border-radius: 50rem;
   }
 }
+.input {
+  width: 100%;
+  margin-bottom: 1.75rem;
+  padding-left: 0rem;
+  border: 1px solid #8b8e94;
+
+  color: $darkBlue;
+  font-size: 2rem;
+
+  outline: none;
+  transition: all 0.3s;
+
+  @include responsive(desktop) {
+    margin-bottom: 0;
+  }
+}
+button {
+  padding: 0 7.75rem;
+  border: none;
+  box-shadow: 0 5px 10px hsla(223, 87%, 63%, 0.3);
+  background-color: $blue;
+
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: hsla(223, 87%, 63%, 0.8);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 .hero {
   width: 80%;
   margin-bottom: 17rem;
@@ -70,4 +125,46 @@ form {
 .copyright {
   font-size: 1.5rem;
   margin-bottom: 1.75rem;
+}
+.icons {
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-right: 2rem;
+
+    @include responsive(desktop) {
+      margin-right: 3rem;
+    }
+  }
+  .fab {
+    overflow: visible;
+    width: auto;
+    height: 6rem;
+    padding: 4rem;
+    border: 1px solid $gray;
+    border-radius: 50%;
+
+    transition: all 0.2s;
+
+    @include responsive(desktop) {
+      height: 4rem;
+      padding: 1rem;
+    }
+
+    &:hover {
+      transform: scale(1.15);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+label {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
