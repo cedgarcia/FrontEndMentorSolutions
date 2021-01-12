@@ -2,33 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="app/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="app/scss/main.min.css">
   
   <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <img src="app/images/logo.svg" alt="logo">
+    <h1>We are launching <span>soon!</span></h1>
+    <h2>Subscribe and get notified.</h2>
+    <form action="#" method="get">
+      <div class="input-wrapper">
+          <label for="email">Enter your email address.</label>
+          <input required id="email" type="email" placeholder="Your email address..." class="form__input">
+          <div class="validation-icons"></div>
+      </div>
+      <button type="submit">Notify Me</button>
+  </form>
+  <img src="app/images/illustration-dashboard.png" alt="illustration">
+  <section class="icons">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-instagram"></i>
+  </section>
+  </main>
 
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
 
   &copy; Copyright Ping. All rights reserved.
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+ 
 </body>
 </html>
