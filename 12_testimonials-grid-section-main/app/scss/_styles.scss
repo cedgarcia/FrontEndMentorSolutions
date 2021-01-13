@@ -1,0 +1,48 @@
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $lightGrayBlue;
+  font-size: 1.625rem;
+  color: $white;
+}
+main {
+  display: grid;
+  max-width: 160rem;
+  height: min-content;
+  padding: 9rem 3rem;
+  grid-template-columns: repeat(2, minmax(0, 55rem));
+  grid-template-rows: repeat(3, min-content);
+  padding: 9rem 6rem;
+  grid-gap: 4rem;
+  @include responsive(phone) {
+    grid-template-columns: minmax(0, 50rem);
+    grid-template-rows: repeat(5, auto);
+  }
+  article {
+    padding: 3rem 4rem;
+    box-shadow: 0px 40px 60px -20px;
+    border-radius: 1rem;
+
+    .client {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      z-index: 3;
+
+      &__image {
+        width: 4rem;
+        margin-right: 2rem;
+        border: 2px solid hsla(0, 0%, 100%, 0.5);
+        border-radius: 50%;
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

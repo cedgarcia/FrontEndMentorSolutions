@@ -1,0 +1,21 @@
+// Colors
+$violet: hsl(263, 55%, 52%);
+$grayBlue: hsl(217, 19%, 35%);
+$blackBlue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$lightGray: hsl(0, 0%, 81%);
+$lightGrayBlue: hsl(210, 46%, 95%);
+
+html {
+  box-sizing: border-box;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
