@@ -1,0 +1,19 @@
+// Color
+$cyan: hsl(171, 66%, 44%);
+$lightBlue: hsl(233, 100%, 69%);
+$grayBlue: hsl(201, 11%, 66%);
+$darkBlue: hsl(210, 10%, 33%);
+
+html {
+  box-sizing: border-box;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
