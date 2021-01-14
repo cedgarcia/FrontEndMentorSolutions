@@ -1,0 +1,145 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $veryDarkBlue;
+  min-height: 100vh;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  background-image: url(../images/bg-mobile.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include responsive(desktop) {
+    background-image: url(../images/bg-desktop.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: max-content;
+  width: 100%;
+  @include responsive(desktop) {
+    flex-direction: row;
+  }
+
+  header,
+  section {
+    margin: 2rem;
+  }
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 5rem;
+  border-radius: 10px;
+  border-top-right-radius: 80px;
+
+  background-color: $darkBlue;
+  height: max-content;
+  width: max-content;
+  padding: 4rem;
+
+  @include responsive(desktop) {
+    width: 100%;
+    max-width: 244.359px;
+  }
+  .logo {
+    height: auto;
+    width: 15.6rem;
+    margin-right: 6rem;
+    margin-bottom: 4rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      border-radius: 10px;
+      margin: 0 1rem;
+      padding: 1rem;
+      background-color: $veryDarkBlue;
+    }
+  }
+}
+section {
+  position: relative;
+  width: 50%;
+  padding: 5rem;
+  border-radius: 8px;
+  background-color: $darkBlue;
+
+  .pop-up {
+    position: absolute;
+    top: -5rem;
+    right: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 1.4rem 2.6rem;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-top: 2rem;
+
+    &__num {
+      margin-right: 1rem;
+      color: $veryDarkBlue;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    &__left {
+      color: $grayBlue;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  p {
+    margin-bottom: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 100;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 1.6rem;
+    }
+  }
+  .progress-bar {
+    height: 2.2rem;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    padding: 2px;
+    border-radius: 50px;
+    background-color: $veryDarkBlue;
+    .start {
+      height: 100%;
+      width: 81.5%;
+      padding: 2px 3px;
+      border-radius: 50px;
+      background: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+      );
+    }
+    .end {
+      height: 9px;
+      width: 9px;
+      margin-left: auto;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+}
+.label {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: space-between;
+}

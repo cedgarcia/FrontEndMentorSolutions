@@ -8,9 +8,9 @@
   <title>Frontend Mentor | Fylo data storage component</title>
 </head>
 <body>
-  <main style="background-color: black;">
+  <main>
     <header>
-      <img src="app/images/logo.svg" alt="logo">
+      <img class="logo" src="app/images/logo.svg" alt="logo">
     <nav>
       <img src="app/images/icon-document.svg" alt="document">
       <img src="app/images/icon-folder.svg" alt="folder">
@@ -18,16 +18,20 @@
     </nav>
   </header>
   <section>
-    <div>
-      <span>185</span>
-      <span>GB left</span>
+    <div class="pop-up">
+      <span class="pop-up__num">185</span>
+      <span class="pop-up__left">GB left</span>
     </div>
     <p>You’ve used 815 GB of your storage</p>
-    <progress value=815 max="1000"> 81.5% </progress>
-    <div>
+    <div class="progress-bar">
+      <div class="start">
+          <div class="end"></div>
+      </div>
+  </div>
+    <div class="label">
       <span><strong>0 GB</strong></span>
       <span><strong>1000 GB</strong></span>
-  </div>
+  </div>  
   </section>
 
   </main>
