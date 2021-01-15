@@ -190,13 +190,38 @@ section.clipboard {
 }
 footer {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: $grayblue;
   @include responsive(phone) {
     flex-direction: column;
   }
   @include responsive(desktop) {
     flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer-logo {
+    width: 5rem;
+    height: 5rem;
+    img {
+      width: 100%;
+    }
+  }
+  .footer-nav {
+    @include responsive(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include responsive(desktop) {
+      display: grid;
+      gap: 1rem 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-auto-flow: column;
+    }
+    a {
+      margin: 1rem;
+      color: $darkBlue;
+      font-weight: 400;
+      text-decoration: none;
+    }
   }
 }
