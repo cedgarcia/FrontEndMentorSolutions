@@ -1,0 +1,124 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+h1,
+h2 {
+  margin-bottom: 2.4rem;
+}
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include responsive(phone) {
+    padding: 10rem 0;
+    background: url(../images/bg-header-mobile.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include responsive(desktop) {
+    padding: 10rem;
+    background: url(../images/bg-header-desktop.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .logo {
+    margin: 4.8rem 0;
+  }
+  h1 {
+    padding: 0 4rem;
+  }
+  p {
+    width: 50rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+// Sections
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+section.feature1 {
+  @include responsive(phone) {
+    margin-top: 16rem;
+    padding: 0 3.2rem;
+  }
+  @include responsive(desktop) {
+    margin-top: 2rem;
+    margin-bottom: 15rem;
+    padding: 0 2rem;
+  }
+  p {
+    font-size: 1.8rem;
+    letter-spacing: 0.15px;
+    line-height: 1.6;
+    max-width: 73rem;
+    text-align: center;
+  }
+  div.layout {
+    display: flex;
+    max-width: 140rem;
+    margin: 0 auto;
+    @include responsive(phone) {
+      margin-top: 8rem;
+      flex-direction: column;
+    }
+    @include responsive(desktop) {
+      margin-top: 6.5rem;
+      flex-direction: row;
+      align-items: center;
+    }
+    div.image {
+      margin-bottom: 0;
+      @include responsive(phone) {
+        margin-bottom: 5.6rem;
+      }
+    }
+    div.articles {
+      text-align: left;
+      margin-left: 11rem;
+      max-width: 35rem;
+      article {
+        margin-bottom: 5.6rem;
+        h3 {
+          margin-bottom: 0.8rem;
+          text-align: center;
+          @include responsive(desktop) {
+            text-align: left;
+          }
+        }
+        p {
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}
+section.feature2 {
+  margin-bottom: 15rem;
+  h2 {
+    font-size: 3.5rem;
+    letter-spacing: -0.59px;
+    margin-top: 0;
+    margin-bottom: 1.9rem;
+  }
+  p {
+    font-size: 1.8rem;
+    letter-spacing: 0.15px;
+    line-height: 1.6;
+    max-width: 73rem;
+    text-align: center;
+  }
+}
