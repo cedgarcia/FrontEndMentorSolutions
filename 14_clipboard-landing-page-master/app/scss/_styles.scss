@@ -225,3 +225,24 @@ footer {
     }
   }
 }
+// buttons
+.download-btn {
+  margin-top: 5rem;
+
+  button {
+    font-size: 2.25rem;
+    margin: 1rem;
+    padding: 2rem 5rem;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  &--green {
+    background-color: $cyan;
+  }
+  &--blue {
+    background-color: $lightBlue;
+  }
+}
