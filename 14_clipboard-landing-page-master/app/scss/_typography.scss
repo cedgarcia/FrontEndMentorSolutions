@@ -1,0 +1,31 @@
+body {
+  color: $grayBlue;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+a {
+  color: $darkBlue;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 4.4rem;
+}
+h2 {
+  font-size: 3.4rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+
+p {
+  line-height: 1.6;
+}
