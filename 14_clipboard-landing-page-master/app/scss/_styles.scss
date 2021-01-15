@@ -6,9 +6,6 @@ h1,
 h2 {
   margin-bottom: 2.4rem;
 }
-img {
-  width: 100%;
-}
 
 header {
   display: flex;
@@ -85,11 +82,15 @@ section.feature1 {
       @include responsive(phone) {
         margin-bottom: 5.6rem;
       }
+      img {
+        width: 100%;
+      }
     }
     div.articles {
       text-align: left;
       margin-left: 11rem;
       max-width: 35rem;
+
       article {
         margin-bottom: 5.6rem;
         h3 {
@@ -108,6 +109,9 @@ section.feature1 {
 }
 section.feature2 {
   margin-bottom: 15rem;
+  img {
+    width: 100%;
+  }
   h2 {
     font-size: 3.5rem;
     letter-spacing: -0.59px;
@@ -120,5 +124,79 @@ section.feature2 {
     line-height: 1.6;
     max-width: 73rem;
     text-align: center;
+  }
+}
+section.feature3 {
+  margin-bottom: 15rem;
+  padding: 0 3rem;
+
+  .workflow {
+    display: flex;
+    @include responsive(phone) {
+      flex-direction: column;
+      margin-top: 10rem;
+    }
+    @include responsive(desktop) {
+      flex-direction: row;
+      max-width: 110rem;
+      margin: 0 auto;
+      margin-top: 7rem;
+    }
+    &__path {
+      @include responsive(phone) {
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+      @include responsive(desktop) {
+        margin-right: 3rem;
+        max-width: 35rem;
+        text-align: center;
+      }
+      img {
+        margin-bottom: 5rem;
+        width: 50px;
+      }
+    }
+  }
+}
+section.companies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 6rem;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+  @include responsive(desktop) {
+    flex-direction: row;
+  }
+  img {
+    height: 3.2rem;
+    @include responsive(phone) {
+      margin-bottom: 10rem;
+    }
+  }
+}
+
+section.clipboard {
+  p {
+    max-width: 77rem;
+    text-align: center;
+    @include responsive(phone) {
+      max-width: 60rem;
+    }
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $grayblue;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+  @include responsive(desktop) {
+    flex-direction: row;
   }
 }
