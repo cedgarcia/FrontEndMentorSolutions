@@ -36,6 +36,9 @@ header {
   p {
     width: 50rem;
     margin-bottom: 2.4rem;
+    @include responsive(phone) {
+      padding: 0 5rem;
+    }
   }
 }
 
@@ -63,6 +66,9 @@ section.feature1 {
     line-height: 1.6;
     max-width: 73rem;
     text-align: center;
+    @include responsive(phone) {
+      padding: 0 5rem;
+    }
   }
   div.layout {
     display: flex;
@@ -102,6 +108,9 @@ section.feature1 {
         }
         p {
           line-height: 1.8;
+          @include responsive(phone) {
+            padding: 0 5rem;
+          }
         }
       }
     }
@@ -124,6 +133,9 @@ section.feature2 {
     line-height: 1.6;
     max-width: 73rem;
     text-align: center;
+    @include responsive(phone) {
+      padding: 0 5rem;
+    }
   }
 }
 section.feature3 {
@@ -185,6 +197,7 @@ section.clipboard {
     text-align: center;
     @include responsive(phone) {
       max-width: 60rem;
+      padding: 0 5rem;
     }
   }
 }
@@ -227,7 +240,11 @@ footer {
 }
 // buttons
 .download-btn {
+  width: 100%;
   margin-top: 5rem;
+  @include responsive(phone) {
+    text-align: center;
+  }
 
   button {
     font-size: 2.25rem;
