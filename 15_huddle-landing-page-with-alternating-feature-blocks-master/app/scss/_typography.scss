@@ -14,6 +14,9 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
+p {
+  color: $grayBlue;
+}
 
 h1 {
   @include responsive(phone) {
@@ -29,5 +32,13 @@ p {
   }
   @include responsive(desktop) {
     font-size: 1.8rem;
+  }
+}
+h2 {
+  @include responsive(phone) {
+    font-size: 2rem;
+  }
+  @include responsive(desktop) {
+    font-size: 2.8rem;
   }
 }
