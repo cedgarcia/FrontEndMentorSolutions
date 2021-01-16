@@ -63,6 +63,7 @@ section.features {
     &__text-wrapper {
       @include responsive(phone) {
         width: 100%;
+        order: 2;
       }
       @include responsive(desktop) {
         width: 50%;
@@ -73,6 +74,14 @@ section.features {
     }
     &__img {
       margin: 0 10rem;
+      @include responsive(phone) {
+        margin-bottom: 10rem;
+      }
     }
   }
+}
+.feature__image--left img {
+  display: flex;
+  order: 1;
+  justify-content: flex-start;
 }
