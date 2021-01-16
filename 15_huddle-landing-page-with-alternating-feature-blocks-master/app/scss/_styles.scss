@@ -55,10 +55,10 @@ section.features {
     width: 80%;
     @include responsive(phone) {
       flex-direction: column;
-      margin-bottom: 5rem;
+      margin-bottom: 10rem;
     }
     @include responsive(desktop) {
-      margin-bottom: 10rem;
+      margin-bottom: 15rem;
     }
     &__text-wrapper {
       @include responsive(phone) {
