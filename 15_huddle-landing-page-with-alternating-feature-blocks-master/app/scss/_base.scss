@@ -1,0 +1,73 @@
+// Colors
+$pink: hsl(322, 100%, 66%);
+$paleCyan: hsl(193, 100%, 96%);
+$darkCyan: hsl(192, 100%, 9%);
+$grayBlue: hsl(208, 11%, 55%);
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+// Button Style
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  &--white {
+    width: 20rem;
+    padding: 1rem;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    @include responsive(phone) {
+      width: 14rem;
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+
+    @include responsive(desktop) {
+      width: 18rem;
+      padding: 1rem;
+      font-size: 1.75rem;
+    }
+
+    &:hover {
+      background-color: hsl(0, 0%, 97%);
+    }
+  }
+
+  &--pink {
+    width: 23rem;
+    padding: 1.6rem;
+    background-color: $pink;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    @include responsive(desktop) {
+      width: 25rem;
+      padding: 1.75rem;
+      font-size: 1.75rem;
+    }
+  }
+}
+button:hover {
+  transition: 0.3s;
+  opacity: 0.8;
+}

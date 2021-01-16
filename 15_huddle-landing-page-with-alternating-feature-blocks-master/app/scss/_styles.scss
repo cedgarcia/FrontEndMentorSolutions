@@ -1,0 +1,42 @@
+header {
+  background-color: $paleCyan;
+  @include responsive(phone) {
+    padding: 4rem 6rem;
+    background-image: url(../images/bg-hero-mobile.svg);
+  }
+  @include responsive(desktop) {
+    height: 100vh;
+    padding: 6rem 8rem;
+    background-image: url(../images/bg-hero-desktop.svg);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    @include responsive(phone) {
+      flex-direction: column;
+    }
+    @include responsive(desktop) {
+      flex-direction: row;
+    }
+    h1,
+    p,
+    button {
+      @include responsive(phone) {
+        margin-bottom: 1.5rem;
+      }
+      @include responsive(desktop) {
+        margin-bottom: 3.5rem;
+      }
+    }
+    p {
+      max-width: 75rem;
+    }
+  }
+}

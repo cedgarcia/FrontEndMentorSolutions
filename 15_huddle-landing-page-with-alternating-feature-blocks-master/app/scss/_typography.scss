@@ -1,0 +1,33 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $darkCyan;
+  line-height: 1.6;
+  @include responsive(phone) {
+    text-align: center;
+  }
+  @include responsive(desktop) {
+    text-align: left;
+  }
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  @include responsive(phone) {
+    font-size: 2.5rem;
+  }
+  @include responsive(desktop) {
+    font-size: 4rem;
+  }
+}
+p {
+  @include responsive(phone) {
+    font-size: 1.5rem;
+  }
+  @include responsive(desktop) {
+    font-size: 1.8rem;
+  }
+}
