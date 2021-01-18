@@ -114,11 +114,21 @@ section.features {
     font-weight: 400;
   }
 }
-
-footer {
+// Footer
+.footer {
   background-color: $darkCyan;
   color: #fff;
-  padding: 8rem 12rem;
-  // padding-top: 8rem;
-  padding-top: 20.8rem;
+  padding: 6.4rem 12rem;
+  padding-top: 10rem;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-nav {
+  display: flex;
+}
+.social-icons {
+  display: flex;
 }
