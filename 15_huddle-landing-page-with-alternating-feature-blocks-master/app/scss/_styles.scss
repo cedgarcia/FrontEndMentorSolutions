@@ -125,10 +125,45 @@ section.features {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
 }
+.footer-body {
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      margin: 4rem 0;
+      svg {
+        margin-right: 5rem;
+      }
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
+
 .footer-nav {
   display: flex;
+  @include responsive(phone) {
+    padding: 5rem 0;
+  }
+  ul {
+    li,
+    a {
+      padding: 0 3rem;
+      padding-bottom: 2rem;
+    }
+  }
 }
 .social-icons {
   display: flex;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
 }
