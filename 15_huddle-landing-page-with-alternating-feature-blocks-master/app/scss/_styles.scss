@@ -156,10 +156,19 @@ section.features {
       padding: 0 3rem;
       padding-bottom: 2rem;
     }
+    a:hover {
+      color: #fff;
+    }
   }
 }
 .social-icons {
   display: flex;
+  .icon {
+    margin: 3rem;
+  }
+  .icon:hover {
+    opacity: 0.8;
+  }
 }
 
 .footer-copyright {
