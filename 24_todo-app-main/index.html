@@ -12,13 +12,14 @@
   <main>
   <header>
     <h1>Todo</h1>
-    <button class="changeTheme-btn" onclick="changeTheme"></button>
+    <div class="changeTheme-btn"></div>
   </header>
+
   <form class="todo-list">
     <div class="todo-list__input">
-      <input type="text" placeholder="Create a new todo">
+      <input id="input" type="text" placeholder="Create a new todo">
     </div>
-    <div class="todo-list-container">
+    <!-- <div class="todo-list-container">
       <ul class="todo-list"></ul>
       <div class="todo-list-footer remarks">
         <span class="items-left"></span>
@@ -29,9 +30,10 @@
         </div>
         <button>Clear Completed</button>
       </div>
-    </div>
+    </div> -->
   </form>
-  <footer><p>Drag and Drop to Reorder</p></footer>
+  <!-- <footer><p>Drag and Drop to Reorder</p></footer> -->
 </main>
+<script src="changeTheme.js"></script>
 </body>
 </html>

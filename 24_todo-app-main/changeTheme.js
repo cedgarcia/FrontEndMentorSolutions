@@ -1,5 +1,3 @@
-const themeBtn = document.querySelector('.changeTheme-btn')
-
-themeBtn.addEventListener('click',() => {
-    if document.body.classList = ()
+document.querySelector('.changeTheme-btn').addEventListener('click', ()=> {
+    document.body.classList.toggle('light-theme')
 })

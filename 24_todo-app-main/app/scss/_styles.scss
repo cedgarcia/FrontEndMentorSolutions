@@ -11,11 +11,38 @@
 }
 
 main {
-  position: absolute;
-  top: 0;
+  display: block;
   width: 100%;
   margin: 0 auto;
+  padding: 4rem;
+  padding-top: 4.8rem;
 }
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1rem;
+  h1 {
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    @include responsive(desktop) {
+      font-size: 4rem;
+    }
+  }
+}
+
+.todo-list {
+  &__input {
+    background-color: var(--bg-todo-list);
+    height: 4.8rem;
+
+    #input {
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      color: var(--text-active);
+    }
+  }
 }
