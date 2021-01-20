@@ -26,6 +26,7 @@ button {
 
 .dark-theme {
   // top-img
+  transition: 0.5s;
   @include responsive(phone) {
     --bg-img: url(../images/bg-mobile-dark.jpg);
   }
@@ -47,10 +48,12 @@ button {
     background-size: cover;
     width: 26px;
     height: 26px;
+    transition: 0.2s;
   }
 }
 
 .light-theme {
+  transition: 0.5s;
   // top-img
   @include responsive(phone) {
     --bg-img: url(../images/bg-mobile-light.jpg);
@@ -73,6 +76,7 @@ button {
     background-size: cover;
     width: 26px;
     height: 26px;
+    transition: 0.2s;
   }
 }
 
