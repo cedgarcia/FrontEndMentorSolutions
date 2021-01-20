@@ -1,6 +1,8 @@
 // Base Styling
 html {
   box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 62.5%;
 }
 
 *,
@@ -9,4 +11,56 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+button {
+  background-color: transparent;
+  outline: transparent;
+  border: transparent;
+}
+
+// Themes
+
+.dark-theme {
+  // top-img
+  @include responsive(phone) {
+    --bg-img: url(../images/bg-mobile-dark.jpg);
+  }
+  @include responsive(desktop) {
+    --bg-img: url(../images/bg-desktop-dark.jpg);
+  }
+  // colors
+  --bg-color: hsl(235, 21%, 11%);
+
+  // Todo-list container color
+  --bg-todo-list: hsl(235, 24%, 19%);
+  --bg-todo-list-border: hsl(233, 14%, 35%);
+  // text color
+
+  --text-active: hsl(234, 39%, 85%);
+  --text-inactive: hsl(233, 14%, 35%);
+}
+
+.light-theme {
+  // top-img
+  @include responsive(phone) {
+    --bg-img: url(../images/bg-mobile-light.jpg);
+  }
+  @include responsive(desktop) {
+    --bg-img: url(../images/bg-desktop-light.jpg);
+  }
+  // Color
+  --bg-color: hsl(236, 33%, 92%);
+
+  // Todo-list container color
+  --bg-todo-list: hsl(0, 0%, 98%);
+  --bg-todo-list-border: hsl(233, 14%, 35%);
+  // text color
+
+  --text-active: hsl(235, 19%, 35%);
+  --text-inactive: hsl(233, 11%, 84%);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-active);
 }

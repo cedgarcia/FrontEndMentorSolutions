@@ -7,44 +7,31 @@
   <link rel="stylesheet" href="app/scss/main.min.css"> 
   <title>Frontend Mentor | Todo app</title>
 </head>
-
-<body>
+<body class="dark-theme">
   <div class="bg-img"></div>
-
-
   <main>
   <header>
     <h1>Todo</h1>
-    <button onclick="changeTheme"></button>
+    <button class="changeTheme-btn" onclick="changeTheme"></button>
   </header>
-
- 
-  <form class="">
-    <div>
+  <form class="todo-list">
+    <div class="todo-list__input">
       <input type="text" placeholder="Create a new todo">
     </div>
-
     <div class="todo-list-container">
       <ul class="todo-list"></ul>
-      <div class="todo-list-footer remarks"></div>
+      <div class="todo-list-footer remarks">
+        <span class="items-left"></span>
+        <div class="filter">
+          <div>All</div>
+          <button>Active </button>
+          <button>Completed</button>
+        </div>
+        <button>Clear Completed</button>
+      </div>
     </div>
   </form>
-  <footer>
-    <p>Drag and Drop to Reorder</p>
-  </footer>
+  <footer><p>Drag and Drop to Reorder</p></footer>
 </main>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
 </body>
 </html>
