@@ -12,6 +12,9 @@ html {
   margin: 0;
   padding: 0;
 }
+li {
+  list-style: none;
+}
 button {
   background: none;
   color: inherit;
@@ -70,7 +73,7 @@ button {
   // text color
 
   --text-active: hsl(235, 19%, 35%);
-  --text-inactive: hsl(233, 11%, 84%);
+  --text-inactive: hsl(234, 11%, 52%);
   .changeTheme-btn {
     background: url(../images/icon-moon.svg);
     background-size: cover;
@@ -82,4 +85,18 @@ button {
 body {
   background-color: var(--bg-color);
   color: var(--text-active);
+}
+// .todo-remarks {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+footer {
+  display: flex;
+  justify-content: center;
+  // margin-top: 15rem;
+  p {
+    font-size: 14px;
+    color: var(--text-inactive);
+  }
 }

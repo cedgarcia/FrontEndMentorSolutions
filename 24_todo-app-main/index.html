@@ -15,26 +15,34 @@
     <div class="changeTheme-btn"></div>
   </header>
 
-  <form class="todo-list" autocomplete="off">
-    <div class="todo-list__input">
+
+    
+    <section class="todo-container__input">
       <div class="circle"></div>
-      <input id="input" type="text" placeholder="Create a new todo">
+      <input type="text" id="input" placeholder="Create a new todo">
+    </section>
+
+    <section class="todo-list"> 
+    <div class="todo-list-content">
+      <ul id="list"></ul>
     </div>
-    <!-- <div class="todo-list-container">
-      <ul class="todo-list"></ul>
-      <div class="todo-list-footer remarks">
-        <span class="items-left"></span>
-        <div class="filter">
-          <div>All</div>
-          <button>Active </button>
-          <button>Completed</button>
-        </div>
-        <button>Clear Completed</button>
-      </div>
-    </div> -->
-  </form>
-  <!-- <footer><p>Drag and Drop to Reorder</p></footer> -->
+
+
+
+<!-- 
+    <div class="todo-remarks">
+       <span class="items-left">5</span>
+      <div class="filter">
+        <button>All</button>
+        <button>Active </button>
+        <button>Completed</button>
+      </div> 
+      <button class="clear">Clear Completed</button>
+    </div>    -->
+  </section>
+
+  <footer><p>Drag and Drop to Reorder</p></footer>
 </main>
-<script src="changeTheme.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
