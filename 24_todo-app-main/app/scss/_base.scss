@@ -95,8 +95,7 @@ footer {
   display: flex;
   justify-content: center;
   // margin-top: 15rem;
-  p {
-    font-size: 14px;
-    color: var(--text-inactive);
-  }
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-inactive);
 }
