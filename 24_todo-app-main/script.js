@@ -55,6 +55,20 @@ document.addEventListener("keyup",function(even){
     }
 });
 
+function complete(element) {
+    element.classList.toggle(CHECK);
+    element.classList.toggle(UNCHECK);
+    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
+
+    LIST[element.id].done = LIST[element.id].done ? false : true;
+
+}
+
+function remove(element) {
+    element.parentNode.parentNode.removeChild(element.parentNode);
+
+    LIST[element.id].trash = true;
+}
 
 
 
@@ -62,9 +76,6 @@ document.addEventListener("keyup",function(even){
 
 
 
-
-
-addToDo("pay" ,1,false,false);
 
 
 
