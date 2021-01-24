@@ -58,7 +58,7 @@ document.addEventListener("keyup",function(even){
 function complete(element) {
     element.classList.toggle(CHECK);
     element.classList.toggle(UNCHECK);
-    // element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
+    // element.parentNode.querySelector(".text").classList.togggle(LINE_THROUGH);
 
     LIST[element.id].done = LIST[element.id].done ? false : true;
 
