@@ -10,7 +10,8 @@ const LINE_THROUGH = 'line-through'
 const list = document.getElementById("list");
 const input = document.getElementById("input");
 
-
+let LIST = [], 
+    id = 0;
 
 
 function addToDo(toDo, id, done, trash){
@@ -40,6 +41,14 @@ document.addEventListener("keyup",function(even){
 
         if(toDo){
             addToDo(toDo);
+
+            LIST.push({
+                name: toDo,
+                id: id,
+                done:false,
+                trash:false
+            });
+            id++
         }
         input.value = "";
  
@@ -55,7 +64,7 @@ document.addEventListener("keyup",function(even){
 
 
 
-addToDo("pay" ,1,true,false);
+addToDo("pay" ,1,false,false);
 
 
 

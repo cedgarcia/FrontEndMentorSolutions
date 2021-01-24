@@ -42,7 +42,6 @@ header {
   border-radius: 50%;
   border: 1px solid var(--text-active);
 }
-//
 .circle-active {
   background: url(../images/icon-check.svg),
     linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
@@ -53,20 +52,6 @@ header {
   border-radius: 50%;
   border: 1px solid var(--text-active);
 }
-// .circle::before {
-//   background-image: url(../images/icon-check.svg);
-//   // background-repeat: no-repeat;
-//   // background-position: center;
-//   z-index: 999;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 2rem;
-//   height: 2rem;
-//   border-radius: 50%;
-//   border: 1px solid var(--text-active);
-// }
-
 .line-through {
   text-decoration: line-through;
   color: #ccc;
@@ -83,8 +68,8 @@ header {
     align-items: center;
     margin-top: 3.2rem;
     height: 4.8rem;
+    border-radius: 10px;
     @include responsive(desktop) {
-      margin-top: 4.8rem;
       height: 6.4rem;
     }
     #input {
@@ -102,18 +87,28 @@ header {
 }
 .todo-list {
   background: var(--bg-todo-list);
-  margin-top: 15rem;
+  margin-top: 4.8rem;
+  border-radius: 10px;
 }
-
 .item {
-  height: 45px;
-  min-height: 45px;
-  position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
   display: grid;
   grid-template-columns: 10% auto 10%;
+  grid-gap: 2rem;
+  padding: 0 3rem;
+  align-items: center;
+  height: 6.4rem;
+  border-bottom: 1px solid var(--text-inactive);
+}
+.close {
+  position: relative;
+  right: -2rem;
+  transition: 0.5s;
+}
+.close:hover {
+  transform: scale(1.2);
+}
+.text {
+  font-size: 1.8rem;
+  color: var(--text-active);
+  font-weight: 500;
 }
