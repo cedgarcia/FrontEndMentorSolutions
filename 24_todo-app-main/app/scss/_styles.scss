@@ -44,12 +44,29 @@ header {
 }
 //
 .circle-active {
-  background-color: green;
+  background: url(../images/icon-check.svg),
+    linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   border: 1px solid var(--text-active);
 }
+// .circle::before {
+//   background-image: url(../images/icon-check.svg);
+//   // background-repeat: no-repeat;
+//   // background-position: center;
+//   z-index: 999;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 2rem;
+//   height: 2rem;
+//   border-radius: 50%;
+//   border: 1px solid var(--text-active);
+// }
+
 .line-through {
   text-decoration: line-through;
   color: #ccc;
