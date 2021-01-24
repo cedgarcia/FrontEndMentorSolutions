@@ -58,20 +58,33 @@ document.addEventListener("keyup",function(even){
 function complete(element) {
     element.classList.toggle(CHECK);
     element.classList.toggle(UNCHECK);
-    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
+    // element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
 
     LIST[element.id].done = LIST[element.id].done ? false : true;
 
 }
 
+// UNCHECK.addEventListener('click', ()=> {
+    
+// })
 function remove(element) {
-    element.parentNode.parentNode.removeChild(element.parentNode);
+    // element.parentNode.parentNode.removeChild(element.parentNode);
 
     LIST[element.id].trash = true;
 }
 
 
-
+list.addEventListener('click', function(event) {
+    const element = event.target;
+    const elementJob = element.attributes.job.value;
+    
+    if (elementJob = "complete") {
+        complete(element)
+    }
+    else if (elementJob = "remove") {
+        remove(element)
+    }
+})
 
 
 
