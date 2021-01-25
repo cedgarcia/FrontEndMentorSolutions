@@ -49,41 +49,44 @@ document.addEventListener("keyup",function(even){
                 trash:false
             });
             id++
+            localStorage.setItem("TODO", JSON.stringify(LIST));
         }
         input.value = "";
  
     }
 });
-addToDo("ced",1, true, false)
+// addToDo("ced",1, true, false)
 
-function completeToDo(element) {
+function completeToDo(element){
     element.classList.toggle(CHECK);
     element.classList.toggle(UNCHECK);
     element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
+    
     LIST[element.id].done = LIST[element.id].done ? false : true;
-
 }
 
-
-// // UNCHECK.addEventListener('click', ()=> {
+// remove to do
+function removeToDo(element){
+    element.parentNode.parentNode.removeChild(element.parentNode);
     
-// // })    
-function removeToDo(element) {
-   element.parentNode.parentNode.removeChild(element.parentNode)
     LIST[element.id].trash = true;
 }
+const element = event.target; // return the clicked element inside list
+const elementJob = element.attributes.job.value; // complete or delete
+// target the items created dynamically
 
+list.addEventListener("click", function(event){
 
- list.addEventListener('click', function(event) {
-     const element = event.target;
-     const elementJob = element.attributes.job.value;
-    
-     if (elementJob = "complete") {
-        completeTodo(element)
+  
+    if(elementJob == "complete"){
+        completeToDo(element);
+    }else if(elementJob == "delete"){
+        removeToDo(element);
     }
-    else if (elementJob = "remove") {
-        removeToDo(element)
-    } })
+    
+    // add item to localstorage ( this code must be added where the LIST array is updated)
+    localStorage.setItem("TODO", JSON.stringify(LIST));
+});
 
 
 
