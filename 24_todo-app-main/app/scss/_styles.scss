@@ -40,8 +40,10 @@ header {
   height: 2rem;
   border-radius: 50%;
   border: 1px solid var(--text-active);
+  cursor: pointer;
 }
 .circle-active {
+  cursor: pointer;
   background: url(../images/icon-check.svg),
     linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   background-repeat: no-repeat;
@@ -53,7 +55,6 @@ header {
 }
 .line-through {
   text-decoration: line-through;
-  color: #ccc;
   height: 23px;
 }
 

@@ -40,7 +40,7 @@ document.addEventListener("keyup",function(even){
         const toDo = input.value;
 
         if(toDo){
-            addToDo(toDo);
+            addToDo(toDo, id, false, false);
 
             LIST.push({
                 name: toDo,
@@ -54,37 +54,36 @@ document.addEventListener("keyup",function(even){
  
     }
 });
+addToDo("ced",1, true, false)
 
-function complete(element) {
+function completeToDo(element) {
     element.classList.toggle(CHECK);
     element.classList.toggle(UNCHECK);
-    // element.parentNode.querySelector(".text").classList.togggle(LINE_THROUGH);
-
+    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
     LIST[element.id].done = LIST[element.id].done ? false : true;
 
 }
 
-// UNCHECK.addEventListener('click', ()=> {
-    
-// })
-function remove(element) {
-    // element.parentNode.parentNode.removeChild(element.parentNode);
 
+// // UNCHECK.addEventListener('click', ()=> {
+    
+// // })    
+function removeToDo(element) {
+   element.parentNode.parentNode.removeChild(element.parentNode)
     LIST[element.id].trash = true;
 }
 
 
-list.addEventListener('click', function(event) {
-    const element = event.target;
-    const elementJob = element.attributes.job.value;
+ list.addEventListener('click', function(event) {
+     const element = event.target;
+     const elementJob = element.attributes.job.value;
     
-    if (elementJob = "complete") {
-        complete(element)
+     if (elementJob = "complete") {
+        completeTodo(element)
     }
     else if (elementJob = "remove") {
-        remove(element)
-    }
-})
+        removeToDo(element)
+    } })
 
 
 
