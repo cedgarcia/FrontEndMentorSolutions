@@ -71,7 +71,7 @@ function removeToDo(element){
     
     LIST[element.id].trash = true;
 }
-const element = event.target; // return the clicked element inside list
+const element = event.target; // return the clicked element inside listg
 const elementJob = element.attributes.job.value; // complete or delete
 // target the items created dynamically
 
