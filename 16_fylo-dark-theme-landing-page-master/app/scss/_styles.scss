@@ -8,12 +8,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 3.6rem 4rem 0;
-  max-width: 128rem;
+  // max-width: 128rem;
   width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
     padding: 7.3rem 8 0;
-    max-width: 128rem;
+    // max-width: 128rem;
   }
   .logo img {
     @include responsive(phone) {
@@ -21,6 +21,7 @@ header {
     }
   }
   nav {
+    background-color: $darkBlue-BG;
     display: flex;
     a {
       margin-right: 5.8rem;
