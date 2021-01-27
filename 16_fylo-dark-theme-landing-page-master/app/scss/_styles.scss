@@ -1,0 +1,27 @@
+body {
+  background-color: $darkBlue-BG;
+}
+
+header {
+  background-color: $darkBlue-BG;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.6rem 4rem 0;
+  max-width: 128rem;
+  margin: 0 auto;
+  @include responsive(desktop) {
+    padding: 7.3rem 8rem 0;
+  }
+  .logo img {
+    @include responsive(phone) {
+      width: 12rem;
+    }
+  }
+  nav {
+    display: flex;
+    a {
+      margin-right: 5.8rem;
+    }
+  }
+}
