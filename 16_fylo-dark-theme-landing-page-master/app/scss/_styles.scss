@@ -1,5 +1,5 @@
 body {
-  background-color: $darkBlueMain;
+  background-color: $darkBlue-BG;
 }
 
 header {
@@ -8,11 +8,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 3.6rem 4rem 0;
-  //   max-width: 128rem;
+  max-width: 128rem;
   width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
-    padding: 7.3rem 40rem 0;
+    padding: 7.3rem 8 0;
+    max-width: 128rem;
   }
   .logo img {
     @include responsive(phone) {
@@ -28,16 +29,17 @@ header {
 }
 .hero {
   background-color: $darkBlue-BG !important;
-  height: 100vh;
+
   padding-top: 7.5rem;
   @include responsive(phone) {
     background-color: $darkBlue-BG;
     background: url(../images/bg-curvy-mobile.svg);
-    background-position-y: bottom;
+    background-position-y: 100%;
     background-repeat: no-repeat;
     background-size: contain;
   }
   @include responsive(desktop) {
+    height: 100vh;
     background-color: $darkBlue-BG;
     background: url(../images/bg-curvy-desktop.svg);
     background-position-y: bottom;
@@ -46,6 +48,7 @@ header {
   }
   &__img {
     max-width: 72rem;
+    width: 82%;
     margin: 0 auto;
   }
   &__text {
@@ -58,5 +61,23 @@ header {
   margin: auto;
   background-color: $darkBlueMain;
   display: flex;
-  max-width: 88rem;
+  justify-content: center;
+  align-items: center;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+}
+
+.about {
+  background-color: $darkBlueMain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+}
+
+.testimonials {
+  display: flex;
 }
