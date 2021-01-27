@@ -80,4 +80,18 @@ header {
 
 .testimonials {
   display: flex;
+  justify-content: center;
+  padding: 3rem;
+  &__card {
+    background-color: $darkBlueTestimonial;
+    padding: 3rem;
+    max-width: 36rem;
+    margin: 2rem;
+  }
+}
+.profile {
+  display: flex;
+  &__avatar {
+    max-width: 2.4rem;
+  }
 }
