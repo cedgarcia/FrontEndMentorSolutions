@@ -1,5 +1,5 @@
 body {
-  background-color: $darkBlue-BG;
+  background-color: $darkBlueMain;
 }
 
 header {
@@ -8,10 +8,11 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 3.6rem 4rem 0;
-  max-width: 128rem;
+  //   max-width: 128rem;
+  width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
-    padding: 7.3rem 8rem 0;
+    padding: 7.3rem 40rem 0;
   }
   .logo img {
     @include responsive(phone) {
@@ -24,4 +25,38 @@ header {
       margin-right: 5.8rem;
     }
   }
+}
+.hero {
+  background-color: $darkBlue-BG !important;
+  height: 100vh;
+  padding-top: 7.5rem;
+  @include responsive(phone) {
+    background-color: $darkBlue-BG;
+    background: url(../images/bg-curvy-mobile.svg);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  @include responsive(desktop) {
+    background-color: $darkBlue-BG;
+    background: url(../images/bg-curvy-desktop.svg);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__img {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  &__text {
+    text-align: center;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+}
+.features {
+  margin: auto;
+  background-color: $darkBlueMain;
+  display: flex;
+  max-width: 88rem;
 }
