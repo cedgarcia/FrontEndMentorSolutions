@@ -81,7 +81,11 @@ header {
 .testimonials {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 3rem;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
   &__card {
     background-color: $darkBlueTestimonial;
     padding: 3rem;
