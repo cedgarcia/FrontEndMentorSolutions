@@ -1,5 +1,5 @@
 body {
-  background-color: $darkBlue-BG;
+  background-color: $darkBlueMain;
 }
 
 header {
@@ -79,6 +79,7 @@ header {
 }
 
 .testimonials {
+  background-color: $darkBlueMain;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,6 +116,35 @@ header {
   }
 }
 
+.cta {
+  position: relative;
+  bottom: -8rem;
+
+  padding: 4rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $darkBlueMain;
+  border-radius: 1.6rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+  @include responsive(phone) {
+    width: 65vw;
+  }
+  @include responsive(desktop) {
+    width: 50vw;
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+}
+
+// Footer
 footer {
   background-color: $darkBlueFooter;
   color: #fff;
