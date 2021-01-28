@@ -268,7 +268,7 @@ footer {
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   @include responsive(phone) {
     flex-direction: column;
   }
@@ -281,7 +281,7 @@ footer {
   ul {
     li,
     a {
-      padding: 0 3rem;
+      padding: 0 1rem;
       padding-bottom: 2rem;
     }
     a:hover {
