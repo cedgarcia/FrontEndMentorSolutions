@@ -153,11 +153,18 @@ header {
 
 .testimonials {
   background-color: $darkBlueMain;
+  background: url(../images/bg-quotes.png);
+  background-repeat: no-repeat;
+  background-position: 1% 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 4rem 0rem;
+  max-width: 118rem;
+  margin: 0 auto;
   @include responsive(phone) {
+    background-position: 10% 0%;
+    padding: 0 5rem;
     flex-direction: column;
   }
   &__card {
@@ -165,12 +172,19 @@ header {
     padding: 3rem;
     max-width: 36rem;
     margin: 2rem;
+    border-radius: 5px;
+    p {
+      margin-bottom: 2rem;
+    }
   }
 }
 .profile {
   display: flex;
-  &__avatar {
+  &__avatar,
+  img {
     max-width: 2.4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
   }
 }
 .footer-body {
@@ -206,16 +220,18 @@ header {
   @include responsive(phone) {
     width: 65vw;
   }
+  @include responsive(tablet) {
+    width: 60vw;
+  }
   @include responsive(desktop) {
     width: 50vw;
   }
 
   h2 {
-    margin-bottom: 4rem;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    margin-bottom: 1.6rem;
   }
   .cta-btn {
+    margin-top: 3rem;
     width: 18rem;
     padding: 1rem;
   }
