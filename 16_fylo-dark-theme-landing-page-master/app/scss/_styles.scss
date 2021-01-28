@@ -12,7 +12,7 @@ header {
   width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
-    padding: 7.3rem 35rem 0;
+    padding: 7.3rem 26rem 0;
     // max-width: 128rem;
   }
   .logo img {
@@ -33,7 +33,6 @@ header {
 }
 .hero {
   background-color: $darkBlue-BG !important;
-
   padding-top: 7.5rem;
   @include responsive(phone) {
     background-color: $darkBlue-BG;
@@ -42,23 +41,35 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
   }
-  @include responsive(desktop) {
-    height: 100vh;
+  @include responsive(tablet) {
     background-color: $darkBlue-BG;
     background: url(../images/bg-curvy-desktop.svg);
     background-position-y: bottom;
     background-repeat: no-repeat;
     background-size: contain;
   }
+  @include responsive(desktop) {
+    // height: 100vh;
+    background-color: $darkBlue-BG;
+    background: url(../images/bg-curvy-desktop.svg);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 16.3rem;
+  }
   &__img {
     max-width: 72rem;
     width: 82%;
     margin: 0 auto;
+    margin-bottom: 3.6rem;
   }
   &__text {
     text-align: center;
     max-width: 72rem;
     margin: 0 auto;
+  }
+  button {
+    margin-top: 3.2rem;
   }
 }
 .features {
@@ -74,19 +85,69 @@ header {
   justify-content: space-between;
   @include responsive(phone) {
     flex-direction: column;
+    padding: 12rem 2.7rem 6rem;
+  }
+  @include responsive(tablet) {
+    padding-top: 10rem;
+    margin: 0 5rem;
+  }
+  @include responsive(desktop) {
+    margin: 0 auto;
+    padding-bottom: 10rem;
   }
   .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     max-width: 35rem;
+    margin-bottom: 7.8rem;
   }
 }
 
 .about {
+  margin: 0 auto;
+  max-width: 123.5rem;
+  padding-bottom: 12rem;
   background-color: $darkBlueMain;
   display: flex;
   justify-content: center;
   align-items: center;
   @include responsive(phone) {
     flex-direction: column;
+  }
+  &__img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 61.4rem;
+    align-items: center;
+    justify-content: center;
+    @include responsive(phone) {
+      padding: 4rem;
+    }
+  }
+  &__text {
+    @include responsive(phone) {
+      padding: 0 4rem;
+    }
+    @include responsive(desktop) {
+      padding-left: 5.7rem;
+      max-width: 56.3rem;
+    }
+
+    h2 {
+      @include responsive(phone) {
+        margin: 0 auto;
+
+        margin-bottom: 2rem;
+      }
+      @include responsive(desktop) {
+        max-width: 70%;
+      }
+    }
+    p {
+      margin-bottom: 1.6rem;
+    }
   }
 }
 
@@ -138,7 +199,7 @@ header {
   flex-direction: column;
   align-items: center;
 
-  background-color: $darkBlueMain;
+  background-color: $darkBlue-BG;
   border-radius: 1.6rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
@@ -153,6 +214,10 @@ header {
     margin-bottom: 4rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+  }
+  .cta-btn {
+    width: 18rem;
+    padding: 1rem;
   }
 }
 
