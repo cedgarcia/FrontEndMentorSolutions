@@ -224,16 +224,37 @@ header {
     width: 60vw;
   }
   @include responsive(desktop) {
-    width: 50vw;
+    width: 5 0vw;
   }
 
   h2 {
     margin-bottom: 1.6rem;
   }
+  .input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include responsive(phone) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  .email-input {
+    margin-top: 3rem;
+    padding: 1.6rem 3.8rem;
+    // width: 100%;
+
+    border-radius: 100px;
+    @include responsive(desktop) {
+      margin-right: 3rem;
+      min-width: 48rem;
+    }
+  }
   .cta-btn {
     margin-top: 3rem;
     width: 18rem;
     padding: 1rem;
+    width: 100%;
   }
 }
 
