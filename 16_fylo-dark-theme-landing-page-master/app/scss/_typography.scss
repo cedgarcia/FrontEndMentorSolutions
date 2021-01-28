@@ -1,9 +1,17 @@
 .heading,
+header,
+nav,
 .cta,
-nav {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Raleway', sans-serif;
 }
 
-body {
+body,
+button,
+a {
+  font-family: 'Open Sans', sans-serif;
   color: $white;
 }

@@ -4,9 +4,17 @@
       @content;
     }
   }
-  @if $breakpoint == desktop {
+  @if $breakpoint == tablet {
     @media only screen and (min-width: 800px) {
       @content;
     }
   }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+a {
+  color: green;
 }

@@ -12,12 +12,15 @@ header {
   width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
-    padding: 7.3rem 8 0;
+    padding: 7.3rem 35rem 0;
     // max-width: 128rem;
   }
   .logo img {
     @include responsive(phone) {
       width: 12rem;
+    }
+    @include responsive(desktop) {
+      min-width: 14rem;
     }
   }
   nav {
@@ -64,8 +67,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  max-width: 88rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   @include responsive(phone) {
     flex-direction: column;
+  }
+  .feature {
+    max-width: 35rem;
   }
 }
 
