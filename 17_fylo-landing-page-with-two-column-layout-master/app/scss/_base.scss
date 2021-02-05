@@ -66,13 +66,24 @@ input:focus {
 figure {
   background-color: #fff;
   padding: 2rem 3rem;
+  transition: 0.3s;
+  border-radius: 3px;
+  margin: 2rem 0;
+  @include responsive(desktop) {
+    max-width: 35rem;
+  }
   .info {
+    padding-top: 1rem;
     display: flex;
     &_img,
     img {
       max-width: 3rem;
-
+      margin-right: 2rem;
       border-radius: 50%;
     }
   }
+}
+figure:hover {
+  background-color: $darkBlue;
+  color: #fff;
 }

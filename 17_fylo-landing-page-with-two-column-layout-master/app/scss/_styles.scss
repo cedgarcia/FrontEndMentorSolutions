@@ -70,22 +70,73 @@ section.feature,
     min-height: 10rem;
   }
 }
+
+.feature-1 {
+  h1 {
+    line-height: 1.6;
+    padding: 3rem 0;
+  }
+  p {
+    padding-bottom: 3rem;
+  }
+  @include responsive(desktop) {
+    .feature__text {
+      p {
+        max-width: 80%;
+      }
+    }
+  }
+}
+
 .feature-2 {
   background-color: $lightGrayBlue;
   // margin: 0 !important;
   // padding: 0 !important;
+  padding: 10rem 0 !important;
   min-width: 100vw !important;
+  @include responsive(desktop) {
+    h2 {
+      padding-bottom: 3rem;
+    }
+    p,
+    .see-how {
+      max-width: 90%;
+      padding-bottom: 2rem;
+    }
+  }
 }
 
 .see-how > a {
   text-decoration: underline;
   color: $cyan;
 }
+a:hover {
+  color: $brightBlue;
+}
 
 // CTA SECTION
 section.cta {
-  padding: 4rem;
+  padding: 4rem 0;
+  @include responsive(desktop) {
+    padding: 10rem;
+  }
+
   background-color: $desaturatedBlue;
+  .cta__text {
+    h2 {
+      font-size: 3rem;
+      padding-bottom: 3rem;
+    }
+    p {
+      max-width: 100%;
+      padding-bottom: 3rem;
+      @include responsive(desktop) {
+        max-width: 60%;
+      }
+
+      line-height: 1.6;
+    }
+  }
 }
 
 // Footer
@@ -154,7 +205,7 @@ footer {
 
   justify-content: center !important;
   .icon {
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
   .icon:hover {
     opacity: 0.8;
@@ -165,4 +216,52 @@ footer {
   border-radius: 50%;
   padding: 1rem;
   cursor: pointer;
+}
+.cta__form {
+  display: flex;
+  flex-direction: column;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+  input {
+    @include responsive(desktop) {
+      width: 50rem;
+    }
+  }
+  button {
+    // margin-top: 1rem;
+    width: 30rem;
+    @include responsive(phone) {
+    }
+  }
+}
+
+button.cta-button {
+  @include responsive(phone) {
+    width: 100%;
+  }
+}
+.feature-1 {
+  @include responsive(desktop) {
+    h1 {
+      max-width: 80%;
+    }
+    p {
+      max-width: 65% !important;
+    }
+    .cta__form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    input {
+      max-width: 40%;
+      margin-bottom: 0;
+    }
+    button {
+      margin-left: 1rem;
+      max-width: 10%;
+      margin-top: 0 !important;
+    }
+  }
 }

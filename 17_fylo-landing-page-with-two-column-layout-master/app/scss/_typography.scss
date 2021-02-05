@@ -46,6 +46,7 @@ footer {
 }
 blockquote {
   font-size: 1.2rem;
+  line-height: 2;
 }
 .info_text {
   h4 {
@@ -54,4 +55,7 @@ blockquote {
   p {
     font-size: 0.8rem;
   }
+}
+.light-text {
+  color: $desaturatedBlue;
 }
