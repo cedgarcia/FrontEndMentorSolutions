@@ -29,3 +29,44 @@ a {
 img {
   width: 100%;
 }
+
+// button CTA
+
+button {
+  border: none;
+  outline: none;
+  background-color: $brightBlue;
+  color: #fff;
+  padding: 1rem;
+  line-height: 1.1875;
+  border-radius: 3px;
+  @include responsive(desktop) {
+    min-width: 20rem;
+  }
+}
+input {
+  border: 1px solid $darkBlue;
+  border-radius: 3px;
+  color: $darkBlue;
+  padding: 1rem 0.8rem;
+  margin-bottom: 0.8rem;
+}
+input:focus {
+  outline: none !important;
+  border: 1px solid $brightBlue;
+}
+
+// card testimonial
+
+figure {
+  background-color: #fff;
+  .info {
+    display: flex;
+    &_img,
+    img {
+      max-width: 3rem;
+
+      border-radius: 50%;
+    }
+  }
+}

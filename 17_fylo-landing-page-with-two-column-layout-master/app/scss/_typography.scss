@@ -1,16 +1,45 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  color: $darkBlue;
 }
 
 h1,
 h2,
 h3,
 h4,
-nav {
+nav,
+button {
   font-family: 'Raleway', sans-serif;
 }
 
-h1 nav {
-  font-weight: 400;
+h1,
+h2 {
+  font-weight: 700;
+}
+
+button {
+  font-weight: 700;
+}
+footer {
+  font-size: 1.6rem;
+}
+
+.feature__text {
+  @include responsive(phone) {
+    h1 {
+      font-size: 2.8rem;
+    }
+  }
+  @include responsive(desktop) {
+    h1,
+    h2 {
+      font-size: 4rem;
+    }
+    h2 {
+    }
+  }
+}
+.cta {
+  color: #fff;
 }

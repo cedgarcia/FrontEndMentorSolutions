@@ -1,12 +1,98 @@
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  @include responsive(phone) {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    padding: 0 4rem;
+  }
+  @include responsive(desktop) {
+    max-width: 1440px;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    padding: 0 5rem;
+  }
+  .logo {
+    @include responsive(phone) {
+      width: 13rem;
+    }
+  }
+  nav {
+    a {
+      color: $darkBlue;
+      font-size: 1.6rem;
+      margin-left: 3.5rem;
+      @include responsive(phone) {
+        margin-left: 3rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
+// Sections Layout
+section.feature,
+.container {
+  display: flex;
+  @include responsive(phone) {
+    flex-direction: column;
+    padding: 0 4rem;
+    .feature__img,
+    img {
+      order: 1;
+    }
+    .feature__text {
+      order: 2;
+    }
+  }
+  @include responsive(desktop) {
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 5rem;
+  }
+}
+
+.divider {
+  @include responsive(phone) {
+    background: url(../images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 3.2rem;
+    margin: 0 auto;
+  }
+  @include responsive(desktop) {
+    background: url(../images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 10rem;
+  }
+}
+.feature-2 {
+  background-color: $lightGrayBlue;
+  // margin: 0 !important;
+  // padding: 0 !important;
+  min-width: 100vw !important;
+}
+
+// CTA SECTION
+section.cta {
+  background-color: $desaturatedBlue;
+}
+
 // Footer
 footer {
   background-color: $darkBlue;
   color: #fff;
   padding: 6.4rem 12rem;
   padding-top: 10rem;
+  @include responsive(phone) {
+    padding-left: 4rem;
+  }
+}
+.footer__logo {
+  padding-bottom: 2rem;
 }
 .footer-wrapper {
   display: flex;
@@ -14,6 +100,7 @@ footer {
   align-items: left;
   @include responsive(phone) {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 .footer-body {
@@ -24,6 +111,7 @@ footer {
       display: grid;
       grid-template-columns: 1fr 2fr;
       p {
+        color: #fff;
         padding-left: 0rem;
       }
     }
@@ -32,25 +120,42 @@ footer {
 .footer-nav {
   display: flex;
   justify-content: space-around;
-  min-width: 40rem;
+  @include responsive(desktop) {
+    min-width: 40rem;
+  }
+
   @include responsive(phone) {
     padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
   }
   ul {
+    padding-bottom: 4rem;
     li,
     a {
       color: #fff;
-      padding: 0 1rem;
+      padding: 0 0rem;
       padding-bottom: 2rem;
     }
   }
 }
 .social-icons {
   display: flex;
+  @include responsive(phone) {
+    margin: 0 auto;
+  }
+
+  justify-content: center !important;
   .icon {
-    margin: 3rem;
+    margin: 0 2rem;
   }
   .icon:hover {
     opacity: 0.8;
   }
+}
+.fab {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
 }
