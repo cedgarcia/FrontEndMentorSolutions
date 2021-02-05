@@ -35,6 +35,7 @@ header {
 section.feature,
 .container {
   display: flex;
+  align-items: center;
   @include responsive(phone) {
     flex-direction: column;
     padding: 0 4rem;
@@ -76,8 +77,14 @@ section.feature,
   min-width: 100vw !important;
 }
 
+.see-how > a {
+  text-decoration: underline;
+  color: $cyan;
+}
+
 // CTA SECTION
 section.cta {
+  padding: 4rem;
   background-color: $desaturatedBlue;
 }
 

@@ -10,6 +10,7 @@ $lightGray: hsl(0, 0%, 75%);
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 *,
 *,
@@ -28,6 +29,10 @@ a {
 }
 img {
   width: 100%;
+}
+.flex {
+  display: flex;
+  align-items: center;
 }
 
 // button CTA
@@ -60,6 +65,7 @@ input:focus {
 
 figure {
   background-color: #fff;
+  padding: 2rem 3rem;
   .info {
     display: flex;
     &_img,

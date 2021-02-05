@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: $darkBlue;
+  font-size: 1.6rem;
 }
 
 h1,
@@ -42,4 +43,15 @@ footer {
 }
 .cta {
   color: #fff;
+}
+blockquote {
+  font-size: 1.2rem;
+}
+.info_text {
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
 }
