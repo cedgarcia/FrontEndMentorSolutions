@@ -1,3 +1,12 @@
+// Colors
+$darkBlue: hsl(243, 87%, 12%);
+$desaturatedBlue: hsl(238, 22%, 44%);
+$brightBlue: hsl(224, 93%, 58%);
+$cyan: hsl(170, 45%, 43%);
+$lightGrayBlue: hsl(240, 75%, 98%);
+$lightGray: hsl(0, 0%, 75%);
+
+// Base
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -12,13 +21,11 @@ html {
 }
 li {
   list-style: none;
+  color: $lightGray;
 }
 a {
   text-decoration: none;
 }
 img {
   width: 100%;
-}
-body {
-  font-family: 'Open Sans', sans-serif;
 }
