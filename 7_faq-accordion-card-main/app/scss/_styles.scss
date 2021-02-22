@@ -171,7 +171,7 @@ summary::after {
   transition: 0.5s;
 }
 details[open] > summary::after {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
   margin-top: -0.5rem;
 }
 details[open] summary ~ * {
