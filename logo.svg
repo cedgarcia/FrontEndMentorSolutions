@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg"  class="d"  viewBox= "0 0 100 100">
+
+    
+    <g>
+      <path  class="sasa"
+     
+      stroke = "#09eafa"
+      stroke-width="3" 
+      stroke-linecap="round" 
+      stroke-linejoin="round" 
+      fill="none"
+      d="M 50, 10
+         L 20, 20
+         L 10, 50
+         L 20, 80
+         L 50, 90
+         L 80, 80
+         L 90, 50 
+         L 80, 20 z "
+          />
+          </g>
+
+          <g>
+        <path  class="sasa"
+        
+        stroke = "#09eafa"
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"
+        d="M 37, 78
+            L 26, 74
+            L 18, 50
+            L 26, 26
+            L 37, 22"
+            />
+            </g>
+
+<g>
+            <path  class="sasa"
+        
+        stroke = "#09eafa"
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"
+        d="M 63,22
+            L 74, 26
+            L 82, 50
+            L 74, 74
+            L 63, 78 z
+            "
+            />
+            </g>
+
+
+            <g>
+                <path  class="sasa"
+            
+            stroke = "#09eafa"
+            stroke-width="3" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none"
+            d="M 57 , 20.5
+                L 50,18
+                L 42, 20.5
+                L 42, 50
+                L 52, 50
+                L 42, 50
+                L 42, 79.5
+                L 50 82
+                L 57 79.5
+             
+                "
+                />
+                </g>
+
+          </svg>

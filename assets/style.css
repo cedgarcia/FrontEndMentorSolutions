@@ -19,5 +19,10 @@ nav {
   background-color: rgb(32, 32, 189);
 }
 .logo {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+.logo > img {
   width: 50px;
 }
