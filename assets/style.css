@@ -14,6 +14,7 @@ img {
 }
 
 nav {
+  padding-top: 5px;
   width: 100%;
   height: 70px;
   background-color: rgb(32, 32, 189);
@@ -25,4 +26,32 @@ nav {
 }
 .logo > img {
   width: 50px;
+}
+
+.menu {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 15px;
+  top: 20px;
+  display: none;
+}
+
+.menu span {
+  background: #888;
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px 6px;
+}
+.projects {
+  width: 2000px;
+}
+
+.viewer {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  bottom: 0px;
+  background-color: green;
 }
