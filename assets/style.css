@@ -44,9 +44,6 @@ nav {
   height: 2px;
   margin: 4px 6px;
 }
-.projects {
-  width: 2000px;
-}
 
 .viewer {
   position: absolute;
@@ -54,4 +51,52 @@ nav {
   top: 70px;
   bottom: 0px;
   background-color: green;
+}
+/* Projects */
+.projects {
+  width: 2000px;
+}
+/* here start */
+.project .image {
+  position: absolute;
+  top: 12px;
+  border: 2px solid #ffffff;
+  width: 32px;
+  height: 32px;
+  background-color: #000000;
+  background-image: url('files/projects/thumbnails.png');
+}
+
+.project div {
+  position: absolute;
+
+  left: 42px;
+  top: 11px;
+  width: 132px;
+
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 13px;
+}
+
+.project:hover {
+  transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1); /* easeOutExpo */
+  width: 45px;
+}
+
+.project.selected {
+  transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1); /* easeOutExpo */
+  width: 180px;
+}
+
+.project.selected:hover {
+  width: 180px;
+}
+/* here end */
+
+@media all and (max-width: 736px) {
+  .menu {
+    display: block;
+  }
 }
