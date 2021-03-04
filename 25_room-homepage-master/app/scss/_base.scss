@@ -45,25 +45,3 @@ a {
   height: 3px;
   margin-bottom: 4px;
 }
-
-.mobile-nav {
-  display: hidden;
-  position: fixed;
-  z-index: 3;
-  width: 0;
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-  -webkit-transition: opacity 0.5s, -webkit-backdrop-filter 0.5s;
-  transition: opacity 0.5s, -webkit-backdrop-filter 0.5s;
-  transition: opacity 0.5s, backdrop-filter 0.5s;
-  transition: opacity 0.5s, backdrop-filter 0.5s, -webkit-backdrop-filter 0.5s;
-}
-.mobile-nav--active {
-  display: initial;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
