@@ -1,0 +1,69 @@
+// Colors
+$darkGray: hsl(0, 0%, 63%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$verydarkGray: hsl(0, 0%, 27%);
+
+html {
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.burger-menu {
+  position: fixed;
+  top: 4rem;
+  left: 5%;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  outline: transparent;
+  border: transparent;
+  z-index: 2000;
+  transition: 0.2s;
+}
+.line {
+  @include responsive(desktop) {
+    display: none;
+  }
+  display: block;
+  background-color: $white;
+  width: 90%;
+  height: 3px;
+  margin-bottom: 4px;
+}
+
+.mobile-nav {
+  display: hidden;
+  position: fixed;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  -webkit-transition: opacity 0.5s, -webkit-backdrop-filter 0.5s;
+  transition: opacity 0.5s, -webkit-backdrop-filter 0.5s;
+  transition: opacity 0.5s, backdrop-filter 0.5s;
+  transition: opacity 0.5s, backdrop-filter 0.5s, -webkit-backdrop-filter 0.5s;
+}
+.mobile-nav--active {
+  display: initial;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
