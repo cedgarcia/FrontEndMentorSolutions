@@ -2,6 +2,8 @@
   display: flex;
   background-color: green;
   padding: 4rem;
+  height: 10rem;
+
   @include responsive(desktop) {
     padding: 6rem;
   }
@@ -10,23 +12,73 @@
       margin: 0 auto;
     }
   }
+}
+//Navigation
+.nav__list {
+  padding: 0 5rem;
+  @include responsive(phone) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    transform: translateY(-14rem);
+    margin: 0 auto;
+    transition: 0.5s;
+    height: 10rem;
+    background-color: $white;
+  }
 
-  &__list {
-    padding: 0 5rem;
-    @include responsive(phone) {
-      display: flex;
-      position: absolute;
-      transform: translateY(-14rem);
-      margin: 0 auto;
-    }
-    @include responsive(desktop) {
-      display: flex;
-    }
-    li {
-      padding: 0 2rem;
+  @include responsive(desktop) {
+    display: flex;
+  }
+  li {
+    padding: 0 2rem;
+  }
+}
+.nav__list.show {
+  transform: translateY(0rem);
+  @include responsive(phone) {
+    a {
+      color: $black;
     }
   }
-  &__list--active {
-    transform: translate(0);
+}
+.nav__list:hover {
+  width: 100%;
+  opacity: 1;
+}
+
+// font-size: 1.75rem;
+// font-weight: 500;
+// text-transform: lowercase;
+// color: black;
+.list {
+  position: relative;
+}
+.list::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  width: 0;
+  height: 2px;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  @include responsive(phone) {
+    background-color: $black;
   }
+  @include responsive(desktop) {
+    background-color: $white;
+    bottom: -2rem;
+  }
+}
+.list:hover::after {
+  width: 50%;
+  opacity: 1;
 }
