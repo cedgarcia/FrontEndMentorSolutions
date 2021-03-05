@@ -1,15 +1,19 @@
 .nav {
   display: flex;
-  background-color: green;
+  position: fixed;
   padding: 4rem;
   height: 10rem;
-
+  z-index: 100;
   @include responsive(desktop) {
     padding: 6rem;
   }
   &__logo {
+    cursor: pointer;
     @include responsive(phone) {
       margin: 0 auto;
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%);
     }
   }
 }
@@ -20,8 +24,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 0%;
+    position: fixed;
+    left: 0;
     top: 0;
     width: 100%;
     transform: translateY(-14rem);
@@ -50,11 +54,6 @@
   width: 100%;
   opacity: 1;
 }
-
-// font-size: 1.75rem;
-// font-weight: 500;
-// text-transform: lowercase;
-// color: black;
 .list {
   position: relative;
 }
@@ -81,4 +80,36 @@
 .list:hover::after {
   width: 50%;
   opacity: 1;
+}
+// SLIDER
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  @include responsive(phone) {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img,
+  img {
+    @include responsive(desktop) {
+      height: 65vh;
+      min-height: 60rem;
+    }
+  }
+}
+
+// About Section
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 40% 1fr;
+  @include responsive(phone) {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-img,
+  img {
+    width: 100%;
+    min-height: 35vh;
+  }
 }

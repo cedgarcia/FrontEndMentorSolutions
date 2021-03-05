@@ -16,11 +16,28 @@ html {
   margin: 0;
   padding: 0;
 }
+body {
+  overflow-x: hidden;
+  @include responsive(desktop) {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+}
+
+// Base styling
 li {
   list-style: none;
 }
 a {
   text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+.disable-scroll {
+  overflow-y: hidden;
 }
 
 // Burger-menu
