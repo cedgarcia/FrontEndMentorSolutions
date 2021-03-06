@@ -8,7 +8,7 @@
   <title>Frontend Mentor | Room homepage</title>
 </head>
 <body>
-  <div class="container" style="min-width:100vw;">
+<!-- 
   <header>
     <nav class="nav">
       <div class="nav__logo">
@@ -25,31 +25,55 @@
         <li class="list"><a href="#">About</a></li>
         <li class="list"><a href="#">Contact</a></li>
       </ul>
-    </nav>
+    </nav> -->
  
-  <section class="slider">
-    <div class="slide active">
-      <picture class="slide__img">
+    <section class="image-slider">
+      <picture class="slide__img active">
         <source media="(max-width:799px)" srcset="app/images/mobile-image-hero-1.jpg">
         <source media="(min-width:800px)" srcset="app/images/desktop-image-hero-1.jpg">
-        <img src="app/images/desktop-image-hero-1.jpg" alt="Flowers">
+        <img src="app/images/desktop-image-hero-1.jpg" alt="img1">
       </picture>
-      
-      <div class="slide__text">
-        <h1 class="text-heading"> Discover innovative ways to decorate</h1>
-        <p class="text-description">
-          We provide unmatched quality, comfort, and style for property owners across the country. 
-          Our experts combine form and function in bringing your vision to life. Create a room in your 
-          own style with our collection and make your property a reflection of you and what you love.</p>
-        <a href="">Shop Now <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg></a>
+
+      <picture class="slide__img">
+        <source media="(max-width:799px)" srcset="app/images/mobile-image-hero-2.jpg">
+        <source media="(min-width:800px)" srcset="app/images/desktop-image-hero-2.jpg">
+        <img src="app/images/desktop-image-hero-1.jpg" alt="img2">
+      </picture>
+
+      <picture class="slide__img">
+        <source media="(max-width:799px)" srcset="app/images/mobile-image-hero-3.jpg">
+        <source media="(min-width:800px)" srcset="app/images/desktop-image-hero-3.jpg">
+        <img src="app/images/desktop-image-hero-1.jpg" alt="img3">
+      </picture>
+    </section>
+     
+    <section class="slide__btn">
+      <div class="slide__btn--prev">
+        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
       </div>
-    </div>
+      <div class="slide__btn--next">
+        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+      </div>
+    </section>
+  </header>
 
+<!-- <section class="slide__btn">
+  <div class="slide__btn--prev">
+    <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+  </div>
+  <div class="slide__btn--next">
+    <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+  </div>
+</section> -->
 
-  </section>
-</header>
-
-
+<!-- <div class="slide__text">
+  <h1 class="text-heading"> Discover innovative ways to decorate</h1>
+  <p class="text-description">
+    We provide unmatched quality, comfort, and style for property owners across the country. 
+    Our experts combine form and function in bringing your vision to life. Create a room in your 
+    own style with our collection and make your property a reflection of you and what you love.</p>
+  <a href="">Shop Now <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg></a>
+</div> -->
   <!-- We are available all across the globe
 
   With stores all over the world, it's easy for you to find furniture for your home or place of business. 
@@ -65,8 +89,8 @@
   experience in this industry, we understand what customers want for their home and office.
 
   Shop now -->
-
-  <section class="about">
+    
+  <!-- <section class="about">
     <div class="about-img">
     <img src="app/images/image-about-dark.jpg" alt="furniture-dark">
   </div>
@@ -80,9 +104,9 @@
     <div class="about-img">
 <img src="app/images/image-about-light.jpg" alt="furniture-light">
 </div>
-</section>
+</section> -->
   
-</div>
+
 
   <script src="/app/js/script.js"></script>
 </body>
