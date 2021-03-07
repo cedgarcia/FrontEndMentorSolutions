@@ -87,3 +87,39 @@ header {
   margin-bottom: 4px;
   transition: 0.4s;
 }
+
+.slideInLeft {
+  animation-name: animateInLeft;
+  z-index: 2;
+}
+
+.slideInRight {
+  animation-name: animateInRight;
+  z-index: 2;
+}
+
+.slideOutLeft {
+  transform: translateX(-100%);
+}
+
+.slideOutRight {
+  transform: translateX(100%);
+}
+
+@keyframes animateInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animateInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
