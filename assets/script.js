@@ -122,6 +122,6 @@ function loadProject(data) {
   selected = divs[data.id];
   selected.className = 'project selected';
 
-  document.title = 'Mr.doob | ' + data.name;
+  document.title = 'Frontend Mentor | ' + data.name;
   iframe.src = data.link;
 }
