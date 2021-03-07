@@ -17,11 +17,11 @@ html {
   padding: 0;
 }
 // body {
-//   overflow-x: hidden;
-//   @include responsive(desktop) {
-//     min-height: 100vh;
-//     overflow: hidden;
-//   }
+// overflow-x: hidden;
+// @include responsive(desktop) {
+// min-height: 100vh;
+// overflow: hidden;
+// }
 // }
 body {
   overflow-y: none;
@@ -41,6 +41,9 @@ img {
 
 .disable-scroll {
   overflow-y: hidden;
+}
+header {
+  position: relative;
 }
 
 // Burger-menu

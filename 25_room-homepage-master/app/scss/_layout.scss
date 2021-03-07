@@ -1,184 +1,169 @@
-// .nav {
-//   display: flex;
-//   position: fixed;
-//   padding: 4rem;
-//   height: 10rem;
-//   z-index: 100;
-//   @include responsive(desktop) {
-//     padding: 6rem;
-//   }
-//   &__logo {
-//     cursor: pointer;
-//     @include responsive(phone) {
-//       margin: 0 auto;
-//       position: fixed;
-//       left: 50%;
-//       transform: translate(-50%);
-//     }
-//   }
-// }
-// //Navigation
-// .nav__list {
-//   padding: 0 5rem;
-//   @include responsive(phone) {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     transform: translateY(-14rem);
-//     margin: 0 auto;
-//     transition: 0.5s;
-//     height: 10rem;
-//     background-color: $white;
-//   }
+.nav {
+  display: flex;
+  position: fixed;
+  padding: 4rem;
+  height: 10rem;
+  z-index: 100;
+  @include responsive(desktop) {
+    padding: 6rem;
+  }
+  &__logo {
+    cursor: pointer;
+    @include responsive(phone) {
+      margin: 0 auto;
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}
+//Navigation
+.nav__list {
+  padding: 0 5rem;
+  @include responsive(phone) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: translateY(-14rem);
+    margin: 0 auto;
+    transition: 0.5s;
+    height: 10rem;
+    background-color: $white;
+    z-index: 1000;
+  }
 
-//   @include responsive(desktop) {
-//     display: flex;
-//   }
-//   li {
-//     padding: 0 2rem;
-//   }
-// }
-// .nav__list.show {
-//   transform: translateY(0rem);
-//   @include responsive(phone) {
-//     a {
-//       color: $black;
-//     }
-//   }
-// }
-// .nav__list:hover {
-//   width: 100%;
-//   opacity: 1;
-// }
-// .list {
-//   position: relative;
-// }
-// .list::after {
-//   content: '';
-//   position: absolute;
-//   bottom: -1rem;
-//   left: 50%;
-//   transform: translate(-50%);
-//   width: 0;
-//   height: 2px;
-//   opacity: 0;
-//   transition: all 0.5s;
-//   @include responsive(phone) {
-//     background-color: $black;
-//   }
-//   @include responsive(desktop) {
-//     background-color: $white;
-//     bottom: -2rem;
-//   }
-// }
-// .list:hover::after {
-//   width: 50%;
-//   opacity: 1;
-// }
-
-// @include responsive(phone) {
-//   .image-slider {
-//     width: 100%;
-//     position: relative;
-//     overflow: hidden;
-//     .slide__img {
-
-//       width: 100%;
-//       z-index: 1;
-//     }
-//     .slide__img img {
-//       opacity: 1;
-//       object-fit: cover;
-//       width: 100%;
-//     }
-//     .slide__img.active {
-//       z-index: 2;
-//       opacity: 1;
-//     }
-//   }
-// }
-// // // SLIDER
-// // .slide {
-// //   display: grid;
-// //   grid-template-columns: 1fr 40%;
-// //   @include responsive(phone) {
-// //     display: flex;
-// //     flex-direction: column;
-// //   }
-// //   &__img,
-// //   img {
-// //     @include responsive(phone) {
-// //       min-height: 50vh;
-// //       width: 100vw;
-// //     }
-// //     @include responsive(desktop) {
-// //       height: 65vh;
-// //       min-height: 60rem;
-// //     }
-// //   }
-// // }
-// // // Buttons
-// // .slide__btn {
-// //   display: flex;
-// //   position: absolute;
-// //   top: 56%;
-// //   left: 60%;
-// //   @include responsive(phone) {
-// //     position: fixed;
-// //     top: 55vh;
-// //     left: 0;
-// //   }
-// //   &--prev,
-// //   &--next {
-// //     background-color: $black;
-// //     padding: 3rem 4rem;
-// //     @include responsive(phone) {
-// //       padding: 1rem 2rem;
-// //     }
-// //   }
-// //   &--prev:hover,
-// //   &--next:hover {
-// //     background-color: $verydarkGray;
-// //     transition: 0.5s;
-// //   }
-// // }
-
-// // About Section
-
-// .about {
-//   display: grid;
-//   grid-template-columns: 1fr 40% 1fr;
-//   @include responsive(phone) {
-//     display: flex;
-//     flex-direction: column;
-//   }
-//   .about-img,
-//   img {
-//     width: 100%;
-//     min-height: 35vh;
-//   }
-// }
-
-.image-slider {
+  @include responsive(desktop) {
+    display: flex;
+  }
+  li {
+    padding: 0 2rem;
+  }
+}
+.nav__list.show {
+  transform: translateY(0rem);
+  @include responsive(phone) {
+    a {
+      color: $black;
+    }
+  }
+}
+.nav__list:hover {
+  width: 100%;
+  opacity: 1;
+}
+.list {
   position: relative;
-  background-color: var(--black1);
-
-  overflow: hidden;
+}
+.list::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 0;
+  height: 2px;
+  opacity: 0;
+  transition: all 0.5s;
+  @include responsive(phone) {
+    background-color: $black;
+  }
+  @include responsive(desktop) {
+    background-color: $white;
+    bottom: -2rem;
+  }
+}
+.list:hover::after {
+  width: 50%;
+  opacity: 1;
 }
 
-.slide__img {
+// SLIDER
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  @include responsive(phone) {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img,
+  img {
+    @include responsive(phone) {
+      min-height: 50vh;
+      width: 100vw;
+    }
+    @include responsive(desktop) {
+      height: 65vh;
+      min-height: 60rem;
+    }
+  }
+}
+// Buttons
+.slide__btn {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+
+  &--prev,
+  &--next {
+    background-color: $black;
+    padding: 3rem 4rem;
+    @include responsive(phone) {
+      padding: 1rem 2rem;
+    }
+  }
+  &--prev:hover,
+  &--next:hover {
+    background-color: $verydarkGray;
+    transition: 0.5s;
+  }
+}
+
+// About Section
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 40% 1fr;
+  @include responsive(phone) {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-img,
+  img {
+    width: 100%;
+    min-height: 35vh;
+  }
+}
+
+section.gallery {
+  position: relative;
+  height: 50.75rem;
+  overflow: hidden;
+}
+.slide {
   position: absolute;
   width: 100%;
   z-index: 1;
-  height: 50vw;
+
   opacity: 0;
+  // min-height: 600px;
 }
-  
-.slide__img .active {
+.slide.active {
   z-index: 2;
   opacity: 1;
+}
+.slide img {
+  @include responsive(phone) {
+    width: 100%;
+    min-height: 50.75rem;
+  }
+  @include responsive(desktop) {
+    height: 66.75rem;
+    min-height: 66.75rem;
+  }
 }
