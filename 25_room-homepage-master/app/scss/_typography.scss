@@ -6,6 +6,56 @@ a {
   font-size: 1.2rem;
 }
 
-.slide__text > a {
-  color: black;
+.slide__text {
+  line-height: 1.6;
+  @include responsive(phone) {
+    padding: 4rem 3rem;
+  }
+  @include responsive(desktop) {
+    padding: 16rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding-bottom: 3rem;
+
+    @include responsive(desktop) {
+      max-width: 43rem;
+      font-size: 3.6rem;
+    }
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $darkGray;
+    padding-bottom: 3rem;
+    @include responsive(desktop) {
+      max-width: 60rem;
+    }
+  }
+  a {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 700;
+    color: black;
+  }
+}
+.about-text {
+  line-height: 1.6;
+  @include responsive(phone) {
+    padding: 5rem;
+  }
+  @include responsive(desktop) {
+    padding: 10rem 12rem;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    padding-bottom: 3rem;
+  }
+  p {
+    font-size: 1.2rem;
+    color: $darkGray;
+  }
 }

@@ -105,9 +105,7 @@
   &__text {
     position: relative;
     top: 0;
-
     min-height: 35.75rem;
-    background-color: green;
     width: 100%;
     z-index: 1;
     position: relative;
@@ -116,7 +114,7 @@
 }
 section.gallery {
   position: relative;
-  height: 80.75rem;
+  height: 85.75rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
