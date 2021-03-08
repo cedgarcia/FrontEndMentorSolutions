@@ -72,24 +72,23 @@ function renderTodo(todo) {
   node.setAttribute('class', `item ${isChecked}`);
   node.setAttribute('data-key', todo.id);
 
-  node.innerHTML = ` <div class="circle" id="${todo.id}></div>
-  <p class="text">${todo.text}</p>
-  <div class= "close" id="${todo.id}">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
-  </div>
-`;
+  //   node.innerHTML = ` <div class="circle" id="${todo.id}></div>
+  //   <p class="text">${todo}</p>
+  //   <div class= "close" id="${todo.id}">
+  //       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+  //   </div>
+  // `;
 
   // node.setAttribute('class', `todo-item ${isChecked}`);
   // node.setAttribute('data-key', todo.id);
-  // node.innerHTML = `
-  //   <input id="${todo.id}" type="checkbox"/>
-  //   <label for="${todo.id}" class="tick js-tick"></label>
-  // <div class="circle" id="${todo.id}></div>
-  //   <span>${todo.text}</span>
-  //   <button class="delete-todo js-delete-todo">
-  //   <svg><use href="#delete-icon"></use></svg>
-  //   </button>
-  // `;
+  node.innerHTML = `
+    <input id="${todo.id}" type="checkbox" class="circle"/>
+
+    <span class="text">${todo.text}</span>
+      <div class= "close" id="${todo.id}">
+         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+     </div>
+  `;
 
   list.append(node);
 }
