@@ -32,3 +32,30 @@ form.addEventListener('submit', (event) => {
     input.focus();
   }
 });
+function renderTodo(todo) {
+  // Select the first element with a class of `js-todo-list`
+  const list = document.querySelector('#list');
+
+  // Use the ternary operator to check if `todo.checked` is true
+  // if so, assign 'done' to `isChecked`. Otherwise, assign an empty string
+  const isChecked = todo.checked ? 'done' : '';
+  // Create an `li` element and assign it to `node`
+  const node = document.createElement('li');
+  // Set the class attribute
+  node.setAttribute('class', `item ${isChecked}`);
+  // Set the data-key attribute to the id of the todo
+  node.setAttribute('data-key', todo.id);
+  // Set the contents of the `li` element created above
+  node.innerHTML = `
+    <input id="${todo.id}" type="checkbox"/>
+    <label for="${todo.id}" class="tick js-tick"></label>
+    <span>${todo.text}</span>
+    <button class="close">
+    <svg><use href="#delete-icon"></use></svg>
+    </button>
+  `;
+
+  // Append the element to the DOM as the last child of
+  // the element referenced by the `list` variable
+  list.append(node);
+}
