@@ -178,3 +178,15 @@ section.gallery {
     min-height: 35vh;
   }
 }
+
+//img
+@include responsive(desktop) {
+  .mobile-img {
+    display: none;
+  }
+}
+@include responsive(phone) {
+  .desktop-img {
+    display: none;
+  }
+}
