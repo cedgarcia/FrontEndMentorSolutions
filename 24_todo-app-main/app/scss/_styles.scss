@@ -42,7 +42,7 @@ header {
   border: 1px solid var(--text-active);
   cursor: pointer;
 }
-.circle-active {
+.active .circle {
   cursor: pointer;
   background: url(../images/icon-check.svg),
     linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
@@ -53,7 +53,7 @@ header {
   border-radius: 50%;
   border: 1px solid var(--text-active);
 }
-.line-through {
+.active span {
   text-decoration: line-through;
 
   height: 23px;
