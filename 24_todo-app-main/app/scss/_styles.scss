@@ -55,7 +55,7 @@ header {
 }
 .active span {
   text-decoration: line-through;
-
+  color: var(--text-inactive);
   height: 23px;
 }
 
@@ -102,10 +102,12 @@ header {
 }
 .close {
   position: relative;
+  opacity: 0.6;
   right: -2rem;
   transition: 0.5s;
 }
 .close:hover {
+  opacity: 1;
   transform: scale(1.2);
 }
 .text {
