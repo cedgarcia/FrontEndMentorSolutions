@@ -41,6 +41,7 @@ header {
   border-radius: 50%;
   border: 1px solid var(--text-active);
   cursor: pointer;
+  outline: none;
 }
 .active .circle {
   cursor: pointer;
@@ -52,6 +53,7 @@ header {
   height: 2rem;
   border-radius: 50%;
   border: 1px solid var(--text-active);
+  outline: none;
 }
 .active span {
   text-decoration: line-through;
@@ -99,19 +101,71 @@ header {
   align-items: center;
   height: 6.4rem;
   border-bottom: 1px solid var(--text-inactive);
+  outline: none;
 }
 .close {
+  outline: none;
   position: relative;
   opacity: 0.6;
   right: -2rem;
   transition: 0.5s;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 .close:hover {
+  outline: none;
   opacity: 1;
   transform: scale(1.2);
 }
 .text {
+  outline: none;
   font-size: 1.8rem;
   color: var(--text-active);
   font-weight: 500;
+}
+
+.todo-remarks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: var(--bg-todo-list);
+  display: flex;
+  height: 6.4rem;
+  font-size: 1.4rem;
+  color: var(--text-inactive);
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 4rem;
+  .filter {
+    button {
+      padding: 0 0.4rem;
+    }
+  }
+  button:hover {
+    color: var(--text-active);
+  }
+  .clear:hover {
+    color: var(--text-active);
+    cursor: pointer;
+  }
+}
+@include responsive(phone) {
+  .todo-remarks {
+    height: 4.8rem;
+  }
+  .filter {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: var(--bg-todo-list);
+    margin-top: 35vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 76%;
+    height: 4.8rem;
+    border-radius: 5px;
+  }
 }

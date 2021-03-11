@@ -5,10 +5,24 @@ document.querySelector('.changeTheme-btn').addEventListener('click', () => {
 
 let todoItems = [];
 
+const list = document.querySelector('#list');
+list.addEventListener('click', (event) => {
+  // mark as completed
+  if (event.target.classList.contains('completed')) {
+    const itemKey = event.target.parentElement.dataset.key;
+    toggleDone(itemKey);
+  }
+  // close when finished
+  if (event.target.classList.contains('close')) {
+    const itemKey = event.target.parentElement.dataset.key;
+    deleteTodo(itemKey);
+  }
+});
+
+// DISPLAY TODO
 function renderTodo(todo) {
   const item = document.querySelector(`[data-key='${todo.id}']`);
   if (todo.deleted) {
-    // remove the item from the DOM
     item.remove();
     return;
   }
@@ -56,38 +70,21 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-//
-const list = document.querySelector('#list');
-list.addEventListener('click', (event) => {
-  // mark as completed
-  if (event.target.classList.contains('completed')) {
-    const itemKey = event.target.parentElement.dataset.key;
-    toggleDone(itemKey);
-  }
-  // close when finished
-  if (event.target.classList.contains('close')) {
-    const itemKey = event.target.parentElement.dataset.key;
-    deleteTodo(itemKey);
-  }
-});
-
+// DONE TODO
 function toggleDone(key) {
   const index = todoItems.findIndex((item) => item.id === Number(key));
-
   todoItems[index].checked = !todoItems[index].checked;
   renderTodo(todoItems[index]);
 }
-
+// DELETE TODO
 function deleteTodo(key) {
-  // find the corresponding todo object in the todoItems array
   const index = todoItems.findIndex((item) => item.id === Number(key));
-  // Create a new object with properties of the current todo item
-  // and a `deleted` property which is set to true
   const todo = {
     deleted: true,
     ...todoItems[index],
   };
-  // remove the todo item from the array by filtering it out
   todoItems = todoItems.filter((item) => item.id !== Number(key));
   renderTodo(todo);
 }
+let active = document.querySelector('.all');
+active.addEventListener('click', (e) => select(active, 'true'));

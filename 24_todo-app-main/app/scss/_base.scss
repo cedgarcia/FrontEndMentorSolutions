@@ -3,6 +3,7 @@ html {
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 62.5%;
+  outline: none;
 }
 
 *,
@@ -98,4 +99,7 @@ footer {
   font-weight: 700;
   font-size: 14px;
   color: var(--text-inactive);
+  @include responsive(phone) {
+    margin-top: 8rem;
+  }
 }
