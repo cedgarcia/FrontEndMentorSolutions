@@ -42,8 +42,9 @@ header {
     margin: 0 7rem;
     .card {
       height: 15rem;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      display: flex;
+      padding: 3rem;
     }
   }
   img {
