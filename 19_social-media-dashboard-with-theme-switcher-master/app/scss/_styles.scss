@@ -32,10 +32,21 @@ header {
 
 .overview {
   position: relative;
-  top: 15vh;
+  top: 16vh;
+  h3 {
+    font-size: 2.5rem;
+  }
   .overview-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 7rem;
+    .card {
+      height: 15rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  img {
+    display: block;
   }
 }
