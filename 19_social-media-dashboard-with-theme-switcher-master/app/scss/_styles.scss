@@ -29,3 +29,13 @@ header {
     width: 90vw;
   }
 }
+
+.overview {
+  position: relative;
+  top: 15vh;
+  .overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 7rem;
+  }
+}
