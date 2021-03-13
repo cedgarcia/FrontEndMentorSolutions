@@ -48,3 +48,8 @@ html {
     background: hsl(230, 22%, 74%);
   }
 }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-heading);
+}
