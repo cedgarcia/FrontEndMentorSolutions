@@ -1,12 +1,13 @@
 header {
   display: flex;
-  // background-color: var(--bg-top);
-  background-color: blue;
+  background-color: var(--bg-top);
+
   height: 23rem;
 }
 
 .card-main {
   display: flex;
+
   justify-content: space-around;
   position: absolute;
   top: 10%;
@@ -18,21 +19,34 @@ header {
 }
 
 .card {
-  // background-color: var(--bg-color-card);
-  background-color: green;
+  height: 100%;
+  background-color: var(--bg-color-card);
   margin: 3rem;
   height: 23rem;
   width: 20vw;
   min-width: none;
-
+  border-radius: 0.7rem;
   @include responsive(phone) {
     width: 90vw;
+    margin: 1rem 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .overview {
   position: relative;
   top: 16vh;
+  @include responsive(phone) {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 115rem;
+  }
 
   h3 {
     font-size: 2.5rem;
@@ -44,6 +58,10 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     // margin: 0 7rem;
+    @include responsive(phone) {
+      display: flex;
+      flex-direction: column;
+    }
     .card {
       height: 15rem;
 
