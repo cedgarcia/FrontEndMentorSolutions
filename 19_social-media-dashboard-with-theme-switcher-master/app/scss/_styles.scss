@@ -21,7 +21,7 @@ header {
   // background-color: var(--bg-color-card);
   background-color: green;
   margin: 3rem;
-  height: 20rem;
+  height: 23rem;
   width: 20vw;
   min-width: none;
 
@@ -33,17 +33,22 @@ header {
 .overview {
   position: relative;
   top: 16vh;
+
   h3 {
     font-size: 2.5rem;
   }
   .overview-cards {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 0 7rem;
+    // margin: 0 7rem;
     .card {
       height: 15rem;
 
       display: flex;
+      align-items: center;
       padding: 3rem;
     }
   }
