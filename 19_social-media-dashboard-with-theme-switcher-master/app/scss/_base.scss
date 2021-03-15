@@ -30,8 +30,20 @@ html {
     background: linear-gradient(
       to right,
       hsl(210, 78%, 56%),
-      hsl(146, 68%, 55%)
+      hsl(146, 68%, 55%)      
     );
+    border-radius: 30px;
+    .circle {
+      background-color: var(--bg-top);
+      height: 20px;
+      width: 20px;
+      position: relative;
+      top: 3px;
+      left: 3px;
+      transition: .3s linear;
+      
+      border-radius: 50%;
+    }
   }
 }
 .light-theme {
@@ -46,6 +58,16 @@ html {
   --text-heading: hsl(230, 17%, 14%);
   .changeTheme-btn {
     background: hsl(230, 22%, 74%);
+    
+  }
+  .circle {
+    background-color: var(--bg-top);
+    // height: 20px;
+    // width: 20px;
+    // position: absolute;
+    // right: 0;
+    transform: translateX(26px);
+    transition: .3s linear;
   }
 }
 
