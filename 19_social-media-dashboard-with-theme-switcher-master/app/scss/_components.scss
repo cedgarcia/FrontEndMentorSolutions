@@ -3,11 +3,7 @@
  
   height: 27px;
   width: 54px;
-  .circle {
-    background-color: black;
-    height: 20px;
-    width: 20px;
-  }
+ 
 
 }
 // typography
@@ -19,6 +15,7 @@
 .subheading {
   font-weight: 400;
   color: var(--text-subheading);
+  font-size: 1.75rem;
 }
 
 .up {
@@ -55,4 +52,9 @@
 }
 .youtube {
   background-color: hsl(348, 97%, 39%);
+}
+.uppercase {
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  letter-spacing: 5px;
 }

@@ -69,6 +69,7 @@ header {
     transform: translate(-50%);
     top: 15rem;
   }
+
 }
 
 .card {
@@ -79,6 +80,7 @@ header {
   width: 20vw;
   min-width: none;
   border-radius: 0.7rem;
+
   @include responsive(phone) {
     width: 90vw;
     margin: 1rem 0;
@@ -88,9 +90,22 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 3rem;
+    .subheading {
+      display: flex;
+      align-items: center;
+      font-size: 1.75rem;
+    }
+    .heading {
+      font-size: 7rem;
+    }
   }
 }
 
+.up, .down {
+  display: flex;
+  align-items: center;
+font-size: 1.5rem; }
 .overview {
   position: relative;
   top: 16vh;
@@ -101,6 +116,7 @@ header {
     top: 118rem;
   }
 
+  
   h3 {
     font-size: 2.5rem;
   }
@@ -117,13 +133,23 @@ header {
     }
     .card {
       height: 15rem;
-
+      justify-content: space-between;
       display: flex;
       align-items: center;
       padding: 3rem;
     }
+   .heading {
+     font-size: 3rem;
+     padding-top: 3rem;
+   }
+   .down, .up {
+     padding-top: 4rem;
+   }
+  
   }
   img {
     display: block;
+   
+
   }
 }
