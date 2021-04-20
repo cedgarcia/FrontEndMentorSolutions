@@ -108,12 +108,12 @@ body {
 }
 
 @media all and (max-width: 640px) {
-  #nav {
+  nav {
     background: none;
     height: auto;
     overflow: auto;
   }
-  #nav .hidden {
+  nav .hidden {
     display: none;
   }
   #logo {
