@@ -59,9 +59,10 @@ img {
 .nav {
   background-color: white;
   z-index: 100;
-  position: relative;
   padding: 1.6rem 0.6rem;
   margin: 0;
+  position: fixed;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -262,6 +263,10 @@ img {
   }
 }
 
+.hero-content {
+  padding-top: 5rem;
+}
+
 @media screen and (min-width: 768px) {
   .hero-content {
     display: flex;
@@ -338,6 +343,7 @@ img {
 }
 
 .hero .heading h1 {
+  font-weight: 400;
   font-family: "DM Serif Display", serif;
   font-size: 4.8rem;
   line-height: 1;
@@ -388,5 +394,106 @@ img {
 @media screen and (min-width: 1000px) {
   .horizontal-line::before {
     display: block;
+  }
+}
+
+.features {
+  text-align: center;
+  padding: 12rem 0;
+}
+
+@media screen and (min-width: 900px) {
+  .features {
+    text-align: left;
+    position: relative;
+    padding-top: 18rem;
+    padding-bottom: 10rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 30rem;
+  }
+}
+
+.features-heading {
+  color: #2b272f;
+  font-size: 4.5rem;
+  letter-spacing: 0.5px;
+  padding-top: 3rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 900px) {
+  .features-heading {
+    font-size: 7rem;
+    letter-spacing: -1px;
+  }
+}
+
+.features-list {
+  padding-top: 7.2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .features-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    padding-top: 8rem;
+  }
+}
+
+.features-list li {
+  display: grid;
+  grid-template-rows: 10rem 5rem 10rem;
+  grid-gap: 1.8rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.features-list li:not(:last-child) {
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 900px) {
+  .features-list li {
+    max-width: 35rem;
+  }
+}
+
+.features-list li img {
+  width: 8.6rem;
+  height: 8.6rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+  .features-list li img {
+    margin: 0;
+  }
+}
+
+.features-list li h2 {
+  font-weight: 400;
+  font-family: "DM Serif Display", serif;
+  letter-spacing: -0.4px;
+  color: #2b272f;
+  font-size: 2.8rem;
+}
+
+.features-list li p {
+  color: #837d87;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  margin-top: -0.5rem;
+  padding-bottom: 0 0.7rem;
+}
+
+@media screen and (min-width: 900px) {
+  .features-list li p {
+    padding: 0;
   }
 }

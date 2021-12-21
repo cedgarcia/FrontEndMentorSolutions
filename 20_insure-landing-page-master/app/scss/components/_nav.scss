@@ -1,10 +1,11 @@
 .nav {
   background-color: $white;
   z-index: 100;
-  position: relative;
+  // position: relative;
   padding: 1.6rem 0.6rem;
   margin: 0;
-
+  position: fixed;
+  width: 100%;
   @media screen and (min-width: 768px) {
     padding: 1.5rem 0;
   }

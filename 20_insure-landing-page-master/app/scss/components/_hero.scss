@@ -25,6 +25,7 @@
     }
   }
   &-content {
+    padding-top: 5rem;
     @media screen and (min-width: 768px) {
       display: flex;
       align-items: center;
@@ -81,6 +82,7 @@
       }
     }
     h1 {
+      font-weight: 400;
       font-family: $fontHeading;
       font-size: 4.8rem;
       line-height: 1;

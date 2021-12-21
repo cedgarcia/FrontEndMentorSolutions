@@ -1,0 +1,77 @@
+.features {
+  text-align: center;
+  padding: 12rem 0;
+
+  @media screen and (min-width: 900px) {
+    text-align: left;
+    position: relative;
+    padding-top: 18rem;
+    padding-bottom: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 30rem;
+  }
+
+  &-heading {
+    color: $vDarkViolet;
+    font-size: 4.5rem;
+    letter-spacing: 0.5px;
+    padding-top: 3rem;
+    font-family: $fontHeading;
+    font-weight: 400;
+    @media screen and (min-width: 900px) {
+      font-size: 7rem;
+      letter-spacing: -1px;
+    }
+  }
+  &-list {
+    padding-top: 7.2rem;
+    @media screen and (min-width: 900px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3rem;
+      padding-top: 8rem;
+    }
+    li {
+      display: grid;
+      grid-template-rows: 10rem 5rem 10rem;
+      grid-gap: 1.8rem;
+
+      max-width: 60rem;
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        padding-bottom: 4rem;
+      }
+      @media screen and (min-width: 900px) {
+        max-width: 35rem;
+      }
+      img {
+        width: 8.6rem;
+        height: 8.6rem;
+        margin: 0 auto;
+
+        @media screen and (min-width: 900px) {
+          margin: 0;
+        }
+      }
+      h2 {
+        font-weight: 400;
+        font-family: $fontHeading;
+        letter-spacing: -0.4px;
+        color: $vDarkViolet;
+        font-size: 2.8rem;
+      }
+      p {
+        color: $vGrayishViolet;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        margin-top: -0.5rem;
+        padding-bottom: 0 0.7rem;
+        @media screen and (min-width: 900px) {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
