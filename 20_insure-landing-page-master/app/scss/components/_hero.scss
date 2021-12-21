@@ -1,0 +1,40 @@
+.hero {
+  background: $darkViolet;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    max-height: 60rem;
+    position: relative;
+
+    &::before {
+      content: url(/app/images/bg-pattern-intro-left-desktop.svg);
+      position: absolute;
+      bottom: -33.5rem;
+      left: 0;
+    }
+    &::after {
+      content: url(/app/images/bg-pattern-intro-right-desktop.svg);
+      position: absolute;
+      top: -8rem;
+      right: 0;
+    }
+  }
+  .wrapper {
+    @media screen and (min-width: 768px) {
+      width: 100%;
+    }
+  }
+  &-content {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+    }
+  }
+  .image {
+    @media screen and (max-width: 768px) {
+      flex: 1;
+      order: 2;
+    }
+  }
+}

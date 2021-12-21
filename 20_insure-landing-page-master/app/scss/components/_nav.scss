@@ -1,18 +1,13 @@
-// nav {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-
-//   .nav-menu {
-//     display: flex;
-//   }
-// }
-
-nav .nav {
-  background-color: #fff;
-  z-index: 1;
+.nav {
+  background-color: $white;
+  z-index: 100;
   position: relative;
-  padding: 1.9rem 0.6rem;
+  padding: 1.6rem 0.6rem;
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 1.5rem 0;
+  }
 
   &-content {
     padding: 1rem 0.5rem;
