@@ -1,0 +1,62 @@
+//Colors
+
+$darkViolet: hsl(256, 26%, 20%);
+$grayishBlue: hsl(216, 30%, 68%);
+
+$vDarkViolet: hsl(270, 9%, 17%);
+$vGrayishViolet: hsl(273, 4%, 51%);
+$vLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+$fontHeading: 'DM Serif Display', serif;
+$fontBody: 'Karla', sans-serif;
+
+// Main Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px = 1 rem
+}
+
+body {
+  font-family: $fontBody;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $white;
+  font-size: 2rem;
+  padding: 1.2rem;
+  letter-spacing: 1.3px;
+  font-weight: 400;
+  transform: 0.1s ease;
+  &:hover {
+    color: $grayishBlue;
+  }
+  @media screen and (min-width: 768px) {
+    color: $vGrayishViolet;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    padding: 0;
+    &:hover {
+      color: $darkViolet;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+.wrapper {
+  max-width: 111rem;
+  width: 90%;
+  margin: 0 auto;
+}
