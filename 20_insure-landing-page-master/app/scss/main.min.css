@@ -56,6 +56,36 @@ img {
   margin: 0 auto;
 }
 
+.horizontal::before {
+  content: '';
+  position: absolute;
+  width: 15rem;
+}
+
+.horizontal-line::before {
+  display: none;
+  border-top: 1px solid #fff;
+  top: -6.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .horizontal-line::before {
+    display: block;
+  }
+}
+
+.horizontal-feature::before {
+  border-top: 1px solid #837d87;
+  margin: -3.2rem 0 0 7.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .horizontal-feature::before {
+    left: unset;
+    margin: -4.6rem 0 0 0;
+  }
+}
+
 .nav {
   background-color: white;
   z-index: 100;
@@ -379,24 +409,6 @@ img {
   }
 }
 
-.horizontal::before {
-  content: '';
-  position: absolute;
-  width: 15rem;
-}
-
-.horizontal-line::before {
-  display: none;
-  border-top: 1px solid #fff;
-  top: -6.5rem;
-}
-
-@media screen and (min-width: 1000px) {
-  .horizontal-line::before {
-    display: block;
-  }
-}
-
 .features {
   text-align: center;
   padding: 12rem 0;
@@ -495,5 +507,67 @@ img {
 @media screen and (min-width: 900px) {
   .features-list li p {
     padding: 0;
+  }
+}
+
+.cta-section {
+  padding-bottom: 15rem;
+}
+
+.cta-section .heading {
+  color: white;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 4rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 900px) {
+  .cta-section .heading {
+    max-width: 55%;
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cta-section .heading {
+    font-size: 5rem;
+  }
+}
+
+.wrapper {
+  width: 87%;
+}
+
+.cta-content {
+  background: #2d2640;
+  padding: 7rem 2.4rem;
+  text-align: center;
+  position: relative;
+  line-height: 4rem;
+  z-index: 2;
+}
+
+.cta-content::before {
+  content: url(/app/images/bg-pattern-how-we-work-mobile.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@media screen and (min-width: 900px) {
+  .cta-content::before {
+    content: url(/app/images/bg-pattern-how-we-work-desktop.svg);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7rem;
+    text-align: left;
   }
 }

@@ -109,20 +109,3 @@
     }
   }
 }
-.horizontal {
-  &::before {
-    content: '';
-    position: absolute;
-    width: 15rem;
-  }
-  &-line {
-    &::before {
-      display: none;
-      border-top: 1px solid #fff;
-      top: -6.5rem;
-      @media screen and (min-width: 1000px) {
-        display: block;
-      }
-    }
-  }
-}

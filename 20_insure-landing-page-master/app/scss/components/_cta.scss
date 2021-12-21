@@ -1,0 +1,48 @@
+.cta-section {
+  padding-bottom: 15rem;
+  .heading {
+    color: $white;
+    font-family: $fontHeading;
+    font-weight: 400;
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    @media screen and (min-width: 900px) {
+      max-width: 55%;
+      font-size: 4.5rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 5rem;
+    }
+  }
+}
+
+.wrapper {
+  width: 87%;
+}
+
+.cta-content {
+  background: $darkViolet;
+  padding: 7rem 2.4rem;
+  text-align: center;
+  position: relative;
+  line-height: 4rem;
+  z-index: 2;
+
+  &::before {
+    content: url(/app/images/bg-pattern-how-we-work-mobile.svg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    @media screen and (min-width: 900px) {
+      content: url(/app/images/bg-pattern-how-we-work-desktop.svg);
+    }
+  }
+  @media screen and (min-width: 900px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7rem;
+    text-align: left;
+  }
+}
