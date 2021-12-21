@@ -256,7 +256,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .hero .wrapper {
     width: 100%;
   }
@@ -266,13 +266,127 @@ img {
   .hero-content {
     display: flex;
     align-items: center;
-    justify-self: center;
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .hero .image {
     flex: 1;
     order: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .image img {
+    margin-left: 1rem;
+    width: 540px;
+    transform: translateY(10.5rem);
+  }
+}
+
+.hero .heading {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  padding: 9rem 2.5rem 9rem;
+  row-gap: 1.8rem;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .heading {
+    flex: 1;
+    order: 1;
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .heading {
+    padding: 0 2rem 1.5rem 0;
+    grid-template-rows: 14rem 8rem 5rem;
+    row-gap: 1.4rem;
+  }
+}
+
+.hero .heading::before {
+  content: url(/app/images/bg-pattern-intro-left-mobile.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .heading::before {
+    display: none;
+  }
+}
+
+.hero .heading::after {
+  content: url(/app/images/bg-pattern-intro-right-mobile.svg);
+  position: absolute;
+  bottom: -18rem;
+  right: 0rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .heading::after {
+    display: none;
+  }
+}
+
+.hero .heading h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 4.8rem;
+  line-height: 1;
+  letter-spacing: -0.6px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .heading h1 {
+    font-size: 5.5rem;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .heading h1 {
+    font-size: 7.2rem;
+    line-height: 89%;
+    letter-spacing: -1px;
+    font-weight: lighter;
+    padding-right: 2rem;
+  }
+}
+
+.hero .heading p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .heading p {
+    padding-top: 0.2rem;
+  }
+}
+
+.horizontal::before {
+  content: '';
+  position: absolute;
+  width: 15rem;
+}
+
+.horizontal-line::before {
+  display: none;
+  border-top: 1px solid #fff;
+  top: -6.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .horizontal-line::before {
+    display: block;
   }
 }
