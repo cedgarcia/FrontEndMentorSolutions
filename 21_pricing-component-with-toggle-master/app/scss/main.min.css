@@ -9,7 +9,7 @@ html {
   font-family: 'Montserrat', serif;
   font-weight: 700;
   font-size: 15px;
-  background: url(./app/images/bg-top.svg) right 0 top 0 no-repeat, url(./app/images/bg-bottom.svg) left 0 bottom 0 no-repeat, #f6f6fe;
+  background: url("../images/bg-top.svg") right 0 top 0 no-repeat, url("../images/bg-bottom.svg") left 0 bottom 0 no-repeat, #f6f6fe;
 }
 
 body {
