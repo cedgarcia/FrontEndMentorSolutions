@@ -34,7 +34,7 @@ a:hover {
 
 @media screen and (min-width: 768px) {
   a {
-    color: #837d87;
+    color: #2d2640;
     font-size: 1.3rem;
     letter-spacing: 1.5px;
     font-weight: bold;
@@ -570,4 +570,96 @@ img {
     padding: 7rem;
     text-align: left;
   }
+}
+
+.footer {
+  position: relative;
+  background-color: #fafafa;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  padding: 8.5rem 0;
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 6.5rem 0;
+  }
+}
+
+.footer::before {
+  content: url(/app/images/bg-pattern-footer-mobile.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .footer::before {
+    content: url(/app/images/bg-pattern-footer-desktop.svg);
+  }
+}
+
+.footer h3 {
+  padding-bottom: 3.5rem;
+  color: #95a9c6;
+}
+
+.footer ul {
+  padding-bottom: 4rem;
+}
+
+.footer hr {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-top .footer-logo {
+  width: 11rem;
+  margin: 0 auto;
+  padding-bottom: 0.3rem 0 3rem;
+}
+
+.footer-top .icons {
+  display: grid;
+  grid-template-columns: repeat(4, 2.4rem);
+  column-gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-top .icons {
+    padding-bottom: 3rem;
+  }
+}
+
+.footer-top .icons svg {
+  fill: #837d87;
+}
+
+.footer-top .icons svg:hover {
+  fill: #2d2640;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+  }
+}
+
+.attribution {
+  text-align: center;
 }

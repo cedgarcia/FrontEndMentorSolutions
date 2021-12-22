@@ -1,0 +1,73 @@
+.footer {
+  position: relative;
+  background-color: $vLightGray;
+
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  padding: 8.5rem 0;
+  z-index: 2;
+  @media screen and (min-width: 768px) {
+    padding: 6.5rem 0;
+  }
+
+  &::before {
+    content: url(/app/images/bg-pattern-footer-mobile.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @media screen and (min-width: 768px) {
+      content: url(/app/images/bg-pattern-footer-desktop.svg);
+    }
+  }
+  h3 {
+    padding-bottom: 3.5rem;
+    color: $grayishBlue;
+  }
+  ul {
+    padding-bottom: 4rem;
+  }
+  hr {
+    width: 100%;
+  }
+}
+.footer-top {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    width: 11rem;
+    margin: 0 auto;
+    padding-bottom: 0.3rem 0 3rem;
+  }
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 2.4rem);
+    column-gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 3rem;
+    }
+    svg {
+      fill: hsl(273, 4%, 51%);
+      &:hover {
+        fill: $darkViolet;
+      }
+    }
+  }
+}
+.footer-bottom {
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+  }
+}
+.attribution {
+  text-align: center;
+}
