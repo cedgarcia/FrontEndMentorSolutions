@@ -1,0 +1,30 @@
+button {
+  width: 100%;
+  background: linear-gradient(to right, $linearGradient);
+  padding: 15px;
+  text-transform: uppercase;
+  color: $vLightGrayishBlue;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  border: 1px solid hsl(237, 63%, 64%);
+  cursor: pointer;
+  &:hover {
+    background: transparent;
+    color: hsl(237, 63%, 64%);
+  }
+}
+.active button {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid #fff;
+  &:hover {
+    color: #fff;
+    border: 1px solid #fff !important;
+
+    background-color: hsl(237, 63%, 64%);
+  }
+}
+.active *:not(button) {
+  color: #fff !important;
+}
