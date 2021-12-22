@@ -1,0 +1,57 @@
+#toggle {
+}
+
+.toggle-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  margin: 35px 20px 60px;
+}
+
+.toggle-annually,
+.toggle-monthly {
+  position: relative;
+  color: $lightGrayishBlue;
+  margin: 0 50px;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    cursor: pointer;
+  }
+}
+.toggle-annually::after {
+  height: 30px;
+  width: 55px;
+  border-radius: 50px;
+  display: inline-block;
+  background: linear-gradient(to right, $linearGradient);
+  transform: translate(20px, -5px);
+}
+.toggle-monthly::before {
+  height: 24px;
+  width: 24px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  transform: translate(-75px, -2px);
+}
+
+#toggle:checked + * .toggle-monthly::before {
+  transform: translate(-54px, -2px);
+}
+.monthly {
+  display: none;
+}
+#toggle:checked ~ * .annual {
+  display: none;
+}
+#toggle:checked ~ * .monthly {
+  display: block;
+}
+
+#toggle {
+  display: none;
+}

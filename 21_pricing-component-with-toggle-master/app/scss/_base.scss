@@ -1,0 +1,44 @@
+// Colors
+
+$vLightGrayishBlue: hsl(240, 78%, 98%);
+$lightGrayishBlue: hsl(234, 14%, 74%);
+$grayishBlue: hsl(233, 13%, 49%);
+$darkGrayishBlue: hsl(232, 13%, 33%);
+
+$linearGradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+  font-size: 15px;
+  background: url(/app/images/bg-top.svg) right 0 top 0 no-repeat,
+    url(/app/images/bg-bottom.svg) left 0 bottom 0 no-repeat, $vLightGrayishBlue;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+li {
+  list-style: none;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    color: $grayishBlue;
+  }
+}
+main {
+  width: 100%;
+  text-align: center;
+}
