@@ -28,3 +28,21 @@ body {
       $color-bg-gradient;
   }
 }
+// Layout
+
+main {
+  @include flexCenter;
+  flex-direction: column;
+  margin: 14.1rem o auto;
+  padding: 0 2.4rem;
+}
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  letter-spacing: clamp(0.3em, 5vw, 0.275em);
+  text-transform: uppercase;
+  text-align: center;
+}
+.countdown {
+  @include flexCenter;
+  margin-top: 17.9%;
+}

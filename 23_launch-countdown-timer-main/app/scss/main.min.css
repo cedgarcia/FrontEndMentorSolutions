@@ -30,3 +30,55 @@ body {
     background: url(../images/pattern-hills.svg) no-repeat bottom/contain, url(../images/bg-stars.svg), linear-gradient(to bottom, #191a24, #261e2f);
   }
 }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 14.1rem o auto;
+  padding: 0 2.4rem;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  letter-spacing: clamp(0.3em, 5vw, 0.275em);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 17.9%;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+}
+
+.card-face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+
+.card-face__front,
+.card-face__back {
+  background-color: #343650;
+  border: 1px solid green;
+}
+
+.flip-clock {
+  height: 2rem;
+  width: 2rem;
+}
