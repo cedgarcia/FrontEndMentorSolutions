@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
 *,
 *::before,
 *::after {
@@ -9,6 +10,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  font-family: 'Red Hat Text', sans-serif;
 }
 
 body {
@@ -79,6 +81,60 @@ h1 {
 }
 
 .flip-clock {
-  height: 2rem;
-  width: 2rem;
+  position: relative;
+  display: flex;
+  height: 5rem;
+  width: 6rem;
+  color: #fb6087;
+  box-shadow: 0 0.14rem 0 #191a24;
+}
+
+.flip-clock:not(:last-of-type) {
+  margin-right: calc(1vw + 1.76rem);
+}
+
+.flip-clock::before, .flip-clock::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: unset;
+  background-color: #343650;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  border: 1px solid #191a24;
+}
+
+.flip-clock::before {
+  content: attr(data-current-number);
+  bottom: 0;
+  align-items: flex-start;
+  border-top: none;
+}
+
+.flip-clock::after {
+  content: attr(data-next-number);
+  top: 0;
+  align-items: flex-end;
+  border-bottom: none;
+  background-color: #2d2f45;
+  color: #fb567f;
+}
+
+.flip-clock > * {
+  cursor: default;
+  user-select: none;
+}
+
+.flip-clock__caption {
+  font-size: clamp(0.7rem, 1vw, 1.4rem);
+  color: #8486a9;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: calc(-1.56rem - 1vw);
 }

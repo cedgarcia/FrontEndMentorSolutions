@@ -1,4 +1,58 @@
 .flip-clock {
-  height: 2rem;
-  width: 2rem;
+  position: relative;
+  display: flex;
+  height: 5rem;
+  width: 6rem;
+
+  color: $red;
+  box-shadow: 0 0.14rem 0 $vDarkBlue;
+
+  &:not(:last-of-type) {
+    margin-right: calc(1vw + 1.76rem);
+  }
+
+  &::before,
+  &::after {
+    @include flexCenter;
+    align-items: unset;
+    background-color: $desaturatedBlue;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border: 1px solid $vDarkBlue;
+  }
+
+  &::before {
+    content: attr(data-current-number);
+    bottom: 0;
+    align-items: flex-start;
+    border-top: none;
+  }
+
+  &::after {
+    content: attr(data-next-number);
+    top: 0;
+    align-items: flex-end;
+    border-bottom: none;
+    background-color: darken($desaturatedBlue, 3.5%);
+    color: darken($red, 2%);
+  }
+
+  & > * {
+    cursor: default;
+    user-select: none;
+  }
+}
+
+.flip-clock__caption {
+  font-size: clamp(0.7rem, 1vw, 1.4rem);
+  color: $grayishBlue;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: calc(-1.56rem - 1vw);
 }
