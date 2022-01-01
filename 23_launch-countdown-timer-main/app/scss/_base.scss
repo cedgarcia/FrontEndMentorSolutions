@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  box-sizing: border-box;
+}
+
+body {
+  @include flexCenter;
+  flex-direction: column;
+  font-size: 1.4rem;
+  color: $white;
+  min-height: 100vh;
+  background-color: black;
+  background: url(../images/pattern-hills.svg) no-repeat bottom right 20%,
+    $color-bg-gradient;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint($bp-lg) {
+    background: url(../images/pattern-hills.svg) no-repeat bottom / contain,
+      $color-bg-gradient;
+  }
+}

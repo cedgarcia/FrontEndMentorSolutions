@@ -1,0 +1,23 @@
+// COLORS
+
+$grayishBlue: hsl(237, 18%, 59%);
+$red: hsl(345, 95%, 68%);
+
+$white: hsl(0, 0%, 100%);
+$desaturatedBlue: hsl(236, 21%, 26%);
+$darkBlue: hsl(235, 16%, 14%);
+$vDarkBlue: hsl(234, 17%, 12%);
+
+$color-hill: lighten(#211a29, 2%);
+
+$color-bg-gradient: url(../images/bg-stars.svg),
+  linear-gradient(to bottom, $vDarkBlue, $color-hill);
+
+// Fonts
+$font-primary: 'Red Hat Text', sans-serif;
+
+// BreakPoints
+
+$bp-sm: 375px;
+$bp-md: 768px;
+$bp-lg: 1440px;
