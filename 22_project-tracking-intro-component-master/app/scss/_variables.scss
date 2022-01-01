@@ -1,0 +1,102 @@
+$red: hsl(0, 100%, 68%);
+$white: rgba(255, 255, 255, 0.8);
+$black: rgba(0, 0, 0, 0.8);
+
+//Neutral
+$very-dark-blue: hsl(230, 29%, 20%);
+$dark-grayish-blue: hsl(230, 11%, 40%);
+$grayish-blue: hsl(231, 7%, 65%);
+$light-grayish-blue: hsl(207, 33%, 95%);
+
+//Font families
+$font-family-body: 'Barlow', sans-serif; //Body; Weight: 400
+$font-family: 'Barlow Condensed', sans-serif;
+
+.nav__links-active {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 15px;
+  display: block;
+  box-shadow: -2px 2px 5px $grayish-blue, 2px -2px 5px hsla(231, 7%, 65%, 0.1);
+  background-color: rgb(250, 250, 250);
+  transition: 0.5s;
+  animation: nav-links 1s both;
+  position: relative;
+  z-index: 2;
+  a {
+    display: block;
+    margin: 22px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: $very-dark-blue;
+
+    &:last-of-type {
+      border-top: 1px solid hsla(231, 7%, 65%, 0.3);
+      margin-top: 20px;
+      padding-top: 20px;
+      color: $grayish-blue;
+    }
+  }
+
+  @keyframes nav-links {
+    from {
+      transform: translateY(100px) rotate(-15deg);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(-30px) rotate(0);
+      opacity: 1;
+    }
+  }
+}
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #242942;
+  -webkit-transform-origin: bottom right;
+  transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+.nav__links a:last-of-type::after {
+  background-color: #a0a1ac;
+}
+.nav__links a:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+.nav__links a:last-of-type {
+  color: #a0a1ac;
+}
+.nav__links a:last-of-type::before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: -30px;
+  top: 5px;
+  border-radius: 50%;
+  background-color: #a0a1ac;
+}
+.nav__links a {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #242942;
+}
