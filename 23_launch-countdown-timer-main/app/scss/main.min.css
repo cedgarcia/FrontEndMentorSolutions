@@ -61,6 +61,14 @@ h1 {
   width: 100%;
   height: 50%;
   z-index: 1;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  transform: rotateX(0);
+  transition: transform 0.7s ease-in;
+}
+
+.card.flipped {
+  transform: rotateX(-180deg);
 }
 
 .card-face {
@@ -72,21 +80,76 @@ h1 {
   height: 100%;
   overflow: hidden;
   align-items: center;
+  backface-visibility: hidden;
 }
 
 .card-face__front,
 .card-face__back {
   background-color: #343650;
-  border: 1px solid green;
+  border: 1px solid #191a24;
+}
+
+.card-face__front {
+  align-items: flex-end;
+  border-radius: 15px 15px 0 0;
+  border-bottom: none;
+  background-color: #2d2f45;
+}
+
+.card-face__back {
+  align-items: flex-start;
+  transform: rotateX(180deg);
+  border-radius: 0 0 15px 15px;
+  border-top: none;
+}
+
+.cutout,
+.card__cutout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cutout::before, .cutout::after,
+.card__cutout::before,
+.card__cutout::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0.15rem;
+  height: 0.15rem;
+  transform: translateY(50%);
+  background: #191a24;
+}
+
+.cutout::before,
+.card__cutout::before {
+  left: 0;
+  clip-path: circle(50% at 0 50%);
+}
+
+.cutout::after,
+.card__cutout::after {
+  right: 0;
+  clip-path: circle(50% at 100% 50%);
+}
+
+.cutout .card-face__back.cutout::before, .cutout .card-face__back.cutout::after,
+.card__cutout .card-face__back.cutout::before,
+.card__cutout .card-face__back.cutout::after {
+  bottom: unset;
+  top: 0;
+  transform: translateY(-50%);
 }
 
 .flip-clock {
   position: relative;
   display: flex;
-  height: 5rem;
-  width: 6rem;
+  width: calc(1vw + 1.843em);
+  height: calc(1vw + 1.759em);
+  font-size: clamp(3.5rem, 5vw, 7.8rem);
   color: #fb6087;
-  box-shadow: 0 0.14rem 0 #191a24;
+  box-shadow: 0 0.14em 0 #191a24;
 }
 
 .flip-clock:not(:last-of-type) {
@@ -105,18 +168,21 @@ h1 {
   height: 50%;
   overflow: hidden;
   border: 1px solid #191a24;
+  border-bottom: none;
 }
 
 .flip-clock::before {
   content: attr(data-current-number);
   bottom: 0;
   align-items: flex-start;
+  border-radius: 0 0 10px 10px;
   border-top: none;
 }
 
 .flip-clock::after {
   content: attr(data-next-number);
   top: 0;
+  border-radius: 10px 10px 0 0;
   align-items: flex-end;
   border-bottom: none;
   background-color: #2d2f45;
@@ -137,4 +203,38 @@ h1 {
   width: 100%;
   position: absolute;
   bottom: calc(-1.56rem - 1vw);
+}
+
+.footer {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.footer__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 3rem;
+}
+
+.footer__item:not(:last-of-type) {
+  margin-right: 3.2rem;
+}
+
+.footer__link svg > path {
+  transition: fill 0.2s ease;
+}
+
+.footer__link:hover svg > path {
+  fill: #fb6087;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
 }

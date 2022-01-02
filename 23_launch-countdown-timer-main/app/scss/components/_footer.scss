@@ -1,0 +1,35 @@
+.footer {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.footer__list {
+  @include flexCenter;
+  list-style-type: none;
+  margin-bottom: 3rem;
+}
+
+.footer__item {
+  &:not(:last-of-type) {
+    margin-right: 3.2rem;
+  }
+}
+
+.footer__link {
+  svg > path {
+    transition: fill 0.2s ease;
+  }
+
+  &:hover svg > path {
+    fill: $red;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

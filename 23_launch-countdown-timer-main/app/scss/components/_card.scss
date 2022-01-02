@@ -2,8 +2,15 @@
   position: relative;
   width: 100%;
   height: 50%;
-
   z-index: 1;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  transform: rotateX(0);
+  transition: transform 0.7s ease-in;
+
+  &.flipped {
+    transform: rotateX(-180deg);
+  }
 }
 .card-face {
   @include flexCenter;
@@ -12,9 +19,55 @@
   height: 100%;
   overflow: hidden;
   align-items: center;
+  backface-visibility: hidden;
 }
 .card-face__front,
 .card-face__back {
   background-color: $desaturatedBlue;
-  border: 1px solid green;
+  border: 1px solid $vDarkBlue;
+}
+
+.card-face__front {
+  align-items: flex-end;
+  border-radius: 15px 15px 0 0;
+  border-bottom: none;
+  background-color: darken($desaturatedBlue, 3.5%);
+}
+.card-face__back {
+  align-items: flex-start;
+  transform: rotateX(180deg);
+  border-radius: 0 0 15px 15px;
+  border-top: none;
+}
+.cutout,
+.card__cutout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0.15rem;
+    height: 0.15rem;
+    transform: translateY(50%);
+    background: $vDarkBlue;
+  }
+  &::before {
+    left: 0;
+    clip-path: circle(50% at 0 50%);
+  }
+  &::after {
+    right: 0;
+    clip-path: circle(50% at 100% 50%);
+  }
+  .card-face__back.cutout {
+    &::before,
+    &::after {
+      bottom: unset;
+      top: 0;
+      transform: translateY(-50%);
+    }
+  }
 }

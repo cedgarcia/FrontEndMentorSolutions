@@ -1,11 +1,11 @@
 .flip-clock {
   position: relative;
   display: flex;
-  height: 5rem;
-  width: 6rem;
-
+  width: calc(1vw + 1.843em);
+  height: calc(1vw + 1.759em);
+  font-size: clamp(3.5rem, 5vw, 7.8rem);
   color: $red;
-  box-shadow: 0 0.14rem 0 $vDarkBlue;
+  box-shadow: 0 0.14em 0 $vDarkBlue;
 
   &:not(:last-of-type) {
     margin-right: calc(1vw + 1.76rem);
@@ -22,18 +22,23 @@
     height: 50%;
     overflow: hidden;
     border: 1px solid $vDarkBlue;
+    border-bottom: none;
   }
 
   &::before {
     content: attr(data-current-number);
     bottom: 0;
     align-items: flex-start;
+    border-radius: 0 0 10px 10px;
+
     border-top: none;
   }
 
   &::after {
     content: attr(data-next-number);
     top: 0;
+    border-radius: 10px 10px 0 0;
+
     align-items: flex-end;
     border-bottom: none;
     background-color: darken($desaturatedBlue, 3.5%);
