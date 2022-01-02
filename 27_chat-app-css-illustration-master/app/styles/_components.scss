@@ -1,0 +1,61 @@
+.mobile {
+  position: relative;
+  width: 300px;
+  height: 620px;
+  border: solid 12px var(--white);
+  border-radius: 2rem;
+  background: var(--mobile-chat);
+  // box-shadow: 0 14px 30px -8px rgb(0 0 0 / 14%);
+  overflow: hidden;
+
+  margin-right: 6rem;
+  animation: mobile 1.2s ease 700ms both;
+}
+
+.mobile::after {
+  --size: 165px;
+
+  position: absolute;
+  top: 0;
+  left: calc(50% - calc(var(--size) / 2));
+  content: '';
+  width: var(--size);
+  height: 1.2rem;
+  background-color: var(--white);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.mobile__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5.5rem;
+  padding: 0.8rem 1rem 0 1rem;
+  border-radius: 1rem 1rem 0.4rem 0.4rem;
+  // box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+  background: var(--gradient-left);
+
+  animation: mobileHeader 700ms ease 1.2s both;
+}
+
+.mobile__main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 6rem 0.6rem 0.6rem 0.6rem;
+}
+
+.wrapper__content {
+  width: auto;
+  height: auto;
+  max-width: 420px;
+
+  animation: content 800ms ease-out 1s both;
+}

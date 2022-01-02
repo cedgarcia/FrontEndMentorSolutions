@@ -1,0 +1,39 @@
+*,
+*:before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --app-background: hsl(0, 0%, 100%);
+  --mobile-chat: hsl(270, 20%, 96%);
+  --mobile-button: hsl(271, 36%, 24%);
+  --mobile-radio: hsl(289, 100%, 72%);
+
+  --mobile-header-subtitle: hsl(276, 100%, 81%);
+  --mobile-main-left: hsl(276, 55%, 52%);
+  --mobile-main-right: hsl(271, 15%, 43%);
+  --text-placeholder: hsl(206, 6%, 79%);
+  --text-title: hsl(271, 36%, 24%);
+  --text-body: hsl(270, 7%, 64%);
+
+  --gradient-top: linear-gradient(
+    to bottom,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  --gradient-left: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  --gradient-right: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+}

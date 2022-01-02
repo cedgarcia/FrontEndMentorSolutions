@@ -1,0 +1,106 @@
+@media only screen and (max-width: 400px) {
+  body::before {
+    left: -18rem;
+  }
+
+  main::before {
+    right: -18rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body::before {
+    left: -15rem;
+    min-height: 35rem;
+  }
+
+  main::before {
+    right: -15rem;
+    min-height: 35rem;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  .mobile {
+    width: 300px;
+    height: 615px;
+    margin-top: 3rem;
+    margin-right: 0;
+    margin-bottom: 5rem;
+    padding-top: 4rem;
+  }
+
+  .mobile__main {
+    padding: 2rem 0.6rem 0.6rem 0.6rem;
+  }
+
+  .wrapper__content {
+    padding: 0 2rem 4rem 2rem;
+  }
+
+  .wrapper__content h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  .wrapper__content p {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1000px) {
+  h3 {
+    font-size: 11px;
+    margin-bottom: 0.15rem;
+  }
+
+  h4.subtitle1 {
+    font-size: 9px;
+    margin-top: 0.15rem;
+  }
+
+  p,
+  label,
+  input {
+    font-size: 10px;
+  }
+
+  span {
+    font-size: 11px;
+  }
+
+  .mobile {
+    width: 285px;
+    height: 580px;
+    margin-right: 2rem;
+  }
+
+  .mobile__header {
+    height: 4.6rem;
+  }
+
+  .mobile__main {
+    padding: 5rem 0.6rem 0.6rem 0.6rem;
+  }
+
+  .wrapper__content {
+    max-width: 500px;
+  }
+
+  .wrapper__content h1 {
+    font-size: 45px;
+  }
+
+  .wrapper__content p {
+    font-size: 18px;
+  }
+
+  .wrapper__message--images {
+    max-width: 100%;
+  }
+}

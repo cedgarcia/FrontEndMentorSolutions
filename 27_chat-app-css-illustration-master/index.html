@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./app/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./app/styles/main.min.css" />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="mobile">
+        <div class="mobile__header">
+          <!-- Icon -->
+          <svg
+            style="transform: rotate(180deg); cursor: pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            width="4"
+            height="23"
+            viewBox="0 0 9.0041 28.9893"
+          >
+            <path
+              fill="#ffffff"
+              d="M14.9981,31.9947a2.0031,2.0031,0,0,1-1.8564-2.7442l4.706-11.76L13.1422,5.75a2,2,0,0,1,3.7129-1.4882l5.0034,12.4843a1.997,1.997,0,0,1,0,1.4869l-5.003,12.5039A2.002,2.002,0,0,1,14.9981,31.9947Z"
+              transform="translate(-12.998 -3.0053)"
+            />
+          </svg>
+          <!-- /Icon -->
+          <img src="./app/images/avatar.jpg" alt="Avatar" lazy="loading" />
+          <div>
+            <h3>Samuel Green</h3>
+            <h4 class="subtitle1">Available to Walk</h4>
+          </div>
+          <!-- Icon -->
+          <svg
+            style="cursor: pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            width="3"
+            height="18"
+            viewBox="0 0 5.3237 21.7198"
+          >
+            <circle fill="#ffffff" cx="2.6618" cy="2.6618" r="2.6618" />
+            <circle fill="#ffffff" cx="2.6618" cy="10.8599" r="2.6618" />
+            <circle fill="#ffffff" cx="2.6618" cy="19.058" r="2.6618" />
+          </svg>
+          <!-- /Icon -->
+        </div>
+        <div class="mobile__main">
+          <p class="message__visitante message__animation--1">
+            That sounds great. I’d be happy to discuss more.
+          </p>
+          <p class="message__visitante message__animation--2">
+            Could you send over some pictures of your dog, please?
+          </p>
+          <div class="wrapper__message--images message__animation--3">
+            <img
+              src="./app/images/dog-image-1.jpg"
+              alt="Happy Dog"
+              loading="lazy"
+            />
+            <img
+              src="./app/images/dog-image-2.jpg"
+              alt="Happy Dog"
+              loading="lazy"
+            />
+            <img
+              src="./app/images/dog-image-3.jpg"
+              alt="Happy Dog"
+              loading="lazy"
+            />
+          </div>
+          <p class="message__local message__animation--4">
+            Here are a few pictures. She’s a happy girl!
+          </p>
+          <p class="message__local message__animation--5">Can you make it?</p>
+          <p class="message__visitante message__animation--6">
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </p>
+          <div class="message__visitante--select message__animation--7">
+            <input type="radio" id="select30" name="select" value="30" />
+            <label for="select30">30 minute walk</label>
+            <span class="euPrice">29</span>
+          </div>
+          <div class="message__visitante--select message__animation--8">
+            <input type="radio" id="select1" name="select" value="1" />
+            <label for="select1">1 hour walk</label>
+            <span class="euPrice">49</span>
+          </div>
+        </div>
+        <div class="wrapper__mobile__input">
+          <input
+            type="text"
+            class="mobile__input--message"
+            placeholder="Type a message..."
+          />
+          <button type="submit" class="mobile__button--send">
+            <!-- Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="7"
+              height="19"
+              viewBox="0 0 18.4942 30.9829"
+            >
+              <path
+                fill="#ffffff"
+                d="M11.253,32.9915A3,3,0,0,1,9.1319,27.87l10.372-10.3726L9.1367,7.13a3,3,0,0,1,4.2422-4.2421L25.8682,15.3767a3,3,0,0,1,0,4.2427L13.3741,32.1125A2.99,2.99,0,0,1,11.253,32.9915Z"
+                transform="translate(-8.2529 -2.0085)"
+              />
+            </svg>
+            <!-- /Icon -->
+          </button>
+        </div>
+      </section>
+      <section class="wrapper__content">
+        <h1>Simple booking</h1>
+        <p class="content">
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Cedrick Garcia</a>.
+    </div>
+  </body>
+</html>

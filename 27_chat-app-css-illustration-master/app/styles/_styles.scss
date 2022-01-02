@@ -1,0 +1,115 @@
+html {
+  background-color: var(--app-background);
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: transparent;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  position: absolute;
+  top: 0;
+  left: -15rem;
+  content: '';
+  width: 60vw;
+  height: 60vw;
+  min-width: 30rem;
+  max-width: 45rem;
+  min-height: 32rem;
+  max-height: 85%;
+  background: var(--gradient-top);
+  border-radius: 0 0 30rem 30rem;
+
+  animation: leftDecorationApp 900ms ease 250ms both;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: transparent;
+  overflow-x: hidden;
+}
+
+main::before {
+  position: absolute;
+  bottom: 0;
+  right: -20vw;
+  content: '';
+  width: 60vw;
+  height: 60vw;
+  min-width: 30rem;
+  max-width: 45rem;
+  min-height: 32rem;
+  max-height: 85%;
+  background-color: var(--mobile-chat);
+  border-radius: 30rem 30rem 0 0;
+  z-index: -1;
+
+  animation: rightDecorationApp 800ms ease-out 300ms both;
+}
+
+/* Texts */
+
+h1 {
+  font-weight: 500; /* 400, 500, 700 */
+  line-height: 2rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 36px;
+  color: var(--text-title);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: 500; /* 400, 500, 700 */
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+h4.subtitle1 {
+  font-weight: 400; /* 400, 500, 700 */
+  font-family: 'Rubik', sans-serif;
+  font-size: 9px;
+  color: var(--mobile-header-subtitle);
+  margin-top: 0.25rem;
+}
+
+p,
+label,
+input {
+  font-weight: 400; /* 400, 500, 700 */
+  font-family: 'Rubik', sans-serif;
+  font-size: 11px;
+}
+
+span {
+  color: var(--white);
+  font-weight: 500; /* 400, 500, 700 */
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+}
+
+p.content {
+  font-weight: 400; /* 400, 500, 700 */
+  line-height: 1.7rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  color: var(--text-body);
+}
