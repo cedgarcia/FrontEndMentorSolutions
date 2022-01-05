@@ -346,7 +346,7 @@ img {
 }
 
 .hero .heading::before {
-  content: url(../images/bg-pattern-intro-left-mobile.svg);
+  content: url(../../images/bg-pattern-intro-left-mobile.svg);
   position: absolute;
   top: 0;
   left: 0;
@@ -360,7 +360,7 @@ img {
 }
 
 .hero .heading::after {
-  content: url(../images/bg-pattern-intro-right-mobile.svg);
+  content: url(../../images/bg-pattern-intro-right-mobile.svg);
   position: absolute;
   bottom: -18rem;
   right: 0rem;

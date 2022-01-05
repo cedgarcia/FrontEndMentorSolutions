@@ -1,1 +1,213 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");html{box-sizing:border-box;font-family:'Libre Franklin', sans-serif;font-size:50%}*,*::before,*::after{box-sizing:inherit;margin:0;padding:0}main{display:flex;flex-direction:column;align-items:center;max-width:80rem;margin:0 auto;padding-top:11rem;padding-bottom:6rem;color:#969696}main .logo{width:auto;height:auto;margin-bottom:9rem}@media only screen and (min-width: 800px){main .logo{margin-bottom:6rem}}main h1{margin-bottom:3rem;font-size:3rem;font-weight:300}@media only screen and (min-width: 800px){main h1{margin-bottom:1.75rem;font-size:6rem}}main h1 span{color:#151f29;font-weight:700}main h2{margin-bottom:5rem;color:#151f29;font-size:2rem;font-weight:300}@media only screen and (min-width: 800px){main h2{font-size:2.5rem}}form{margin-bottom:14rem;display:flex;flex-direction:column;width:36rem}@media only screen and (min-width: 800px){form{margin-bottom:11rem;flex-direction:row;width:100%}}form .input-wrapper{position:relative;flex:1;margin-right:0}@media only screen and (min-width: 800px){form .input-wrapper{margin-right:2rem}}form input,form button{height:7rem;border-radius:50rem}.input{width:100%;margin-bottom:1.75rem;padding-left:0rem;border:1px solid #8b8e94;color:#151f29;font-size:2rem;outline:none;transition:all 0.3s}@media only screen and (min-width: 800px){.input{margin-bottom:0}}button{padding:0 7.75rem;border:none;box-shadow:0 5px 10px rgba(79,125,243,0.3);background-color:#4f7df3;color:white;font-size:2rem;letter-spacing:1px;cursor:pointer;outline:none;transition:all 0.3s}button:hover{background-color:rgba(79,125,243,0.8)}button:active{transform:scale(0.95)}.hero{width:80%;margin-bottom:17rem}@media only screen and (min-width: 800px){.hero{width:100%;margin-bottom:9rem}}.icons{margin-bottom:3rem}@media only screen and (min-width: 800px){.icons{margin-bottom:2.5rem}}.copyright{font-size:1.5rem;margin-bottom:1.75rem}.icons{text-decoration:none}.icons:not(:last-child){margin-right:2rem}@media only screen and (min-width: 800px){.icons:not(:last-child){margin-right:3rem}}.icons .fab{overflow:visible;width:auto;height:6rem;padding:4rem;border:1px solid #969696;border-radius:50%;transition:all 0.2s}@media only screen and (min-width: 800px){.icons .fab{height:4rem;padding:1rem}}.icons .fab:hover{transform:scale(1.15);box-shadow:0 5px 10px rgba(0,0,0,0.1)}label{border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+html {
+  box-sizing: border-box;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 11rem;
+  padding-bottom: 6rem;
+  color: #969696;
+}
+
+main .logo {
+  width: auto;
+  height: auto;
+  margin-bottom: 9rem;
+}
+
+@media only screen and (min-width: 800px) {
+  main .logo {
+    margin-bottom: 6rem;
+  }
+}
+
+main h1 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 800px) {
+  main h1 {
+    margin-bottom: 1.75rem;
+    font-size: 6rem;
+  }
+}
+
+main h1 span {
+  color: #151f29;
+  font-weight: 700;
+}
+
+main h2 {
+  margin-bottom: 5rem;
+  color: #151f29;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 800px) {
+  main h2 {
+    font-size: 2.5rem;
+  }
+}
+
+form {
+  margin-bottom: 14rem;
+  display: flex;
+  flex-direction: column;
+  width: 36rem;
+}
+
+@media only screen and (min-width: 800px) {
+  form {
+    margin-bottom: 11rem;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+form .input-wrapper {
+  position: relative;
+  flex: 1;
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  form .input-wrapper {
+    margin-right: 2rem;
+  }
+}
+
+form input,
+form button {
+  height: 7rem;
+  border-radius: 50rem;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 1.75rem;
+  padding-left: 0rem;
+  border: 1px solid #8b8e94;
+  color: #151f29;
+  font-size: 2rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+@media only screen and (min-width: 800px) {
+  .input {
+    margin-bottom: 0;
+  }
+}
+
+button {
+  padding: 0 7.75rem;
+  border: none;
+  box-shadow: 0 5px 10px rgba(79, 125, 243, 0.3);
+  background-color: #4f7df3;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: rgba(79, 125, 243, 0.8);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.hero {
+  width: 80%;
+  margin-bottom: 17rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .hero {
+    width: 100%;
+    margin-bottom: 9rem;
+  }
+}
+
+.icons {
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .icons {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.copyright {
+  font-size: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.icons {
+  text-decoration: none;
+}
+
+.icons:not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .icons:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+
+.icons .fab {
+  overflow: visible;
+  width: auto;
+  height: 6rem;
+  padding: 4rem;
+  border: 1px solid #969696;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+@media only screen and (min-width: 800px) {
+  .icons .fab {
+    height: 4rem;
+    padding: 1rem;
+  }
+}
+
+.icons .fab:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
